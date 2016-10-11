@@ -1,1 +1,6 @@
-$main-background-color: magenta;
+$main-background: linear-gradient(to bottom, rgb(63, 207, 212), rgb(181, 224, 238));
+
+@mixin body-core-styling {
+  background: $main-background;
+  background-size: auto 1500px;
+}
