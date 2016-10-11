@@ -13,10 +13,10 @@ header {
   h3 {
     font-size: $subheader-font-size;
     font-style: italic;
-    text-align: center;
+    @include center-contained-items-horiz;
   }
   nav {
-    margin: auto;
+    @include center-item-horiz;
   }
 
   .nav-bar-item {
