@@ -3,3 +3,11 @@
 body {
   @include body-core-styling;
 }
+
+header {
+
+  h1 {
+    text-align: center;
+  }
+
+}
