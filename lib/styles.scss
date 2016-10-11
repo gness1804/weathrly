@@ -5,9 +5,18 @@ body {
 }
 
 header {
+  text-align: center;
 
   h1 {
+    @include boilerplate-headline;
+  }
+  h3 {
+    font-size: $subheader-font-size;
+    font-style: italic;
     text-align: center;
   }
+  nav {
+    margin: auto;
+  }
 
-}
+} //end of header
