@@ -11,6 +11,8 @@
   "author": "Kristen Burgess and Graham Nessler",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
     "chai": "^3.5.0",
     "css-loader": "^0.25.0",
     "jquery": "^3.1.1",
