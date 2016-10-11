@@ -4,8 +4,10 @@
   "description": "our weather app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "webpack-dev-server --hot --inline",
+    "build": "webpack",
+    "test": "mocha"
+    },
   "author": "Kristen Burgess and Graham Nessler",
   "license": "ISC",
   "devDependencies": {
