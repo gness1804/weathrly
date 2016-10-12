@@ -12,6 +12,8 @@ class WeatherButton extends React.Component {
   }
 } //end of WeatherButton
 
+module.exports = WeatherButton;
+
 
 // class ActionButton extends React.Component {
 //   render () {
