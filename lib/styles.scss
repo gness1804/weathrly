@@ -16,12 +16,15 @@ header {
     @include center-contained-items-horiz;
   }
   nav {
+    margin-top: 50px;
     @include center-item-horiz;
   }
 
-  .nav-bar-item {
+  .nav-bar-item{
     display: inline-block;
     list-style-type: none;
+    margin-left: $standard-nav-item-left-right-margin;
+    margin-right: $standard-nav-item-left-right-margin;
   }
 
 } //end of header
