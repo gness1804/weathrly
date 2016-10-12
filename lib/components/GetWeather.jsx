@@ -75,7 +75,6 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-          // <button id ="get-weather-button" type="button">Get Weather</button>
            <WeatherButton id = 'get-weather-button' text="Submit" handleClick={this.getWeather("dogs")} />
       </div>
     );
