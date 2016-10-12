@@ -3,18 +3,48 @@ const ReactDOM = require('react-dom');
 const WeatherButton = require('./WeatherButton.jsx');
 
 class GetWeather extends React.Component {
-  constructor() {
-    super();
-    this.state = { location: ''};
+  constructor(props) {
+    super(props);
+    this.state = { location: props.location};
   }
 
-  function getWeather() {
-    $.get("http://weatherly-api.herokuapp.com/api/weather", function( data ) {
-      $(".weather-output p").text("It will be " + data[0].weatherType.type + " " + "on" + " " + data[0].date);
-    });
-  }
 
-  this.setState = {location:}
+  // getWeather (word) {
+  //   this.setState({location: this.state.location + word});
+  // }
+
+  // class LikesCounter extends React.Component {
+  //   constructor(props) {
+  //     super(props);
+  //     this.state = {count: props.initialCount};
+  //   }
+  //
+  //   addToLikesCount (num) {
+  //     this.setState( {count: this.state.count + num } )
+  //   }
+  //
+  //   render () {
+  //     return (
+  //       <div className="LikesCounter">
+  //         <h3>Likes: {this.state.count}</h3>
+  //         <div className="ActionButtons">
+  //           <ActionButton id = 'like' text="Like! (+1)" handleClick={this.addToLikesCount.bind(this, 1)} /> //props
+  //           <ActionButton id = 'dislike' text="Dislike! (-1)" handleClick={this.addToLikesCount.bind(this, -1)} /> //props
+  //         </div>
+  //       </div>
+  //     )
+  //   }
+  // }
+  //
+  // module.exports = LikesCounter
+
+  // function getWeather() {
+  //   $.get("http://weatherly-api.herokuapp.com/api/weather", function( data ) {
+  //     $(".weather-output p").text("It will be " + data[0].weatherType.type + " " + "on" + " " + data[0].date);
+  //   });
+  // }
+  //
+  // this.setState = {location:}
 
   // getWeather();
 
@@ -45,10 +75,11 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-          <button id ="get-weather-button" type="button">Get Weather</button>
+          // <button id ="get-weather-button" type="button">Get Weather</button>
+           <WeatherButton id = 'get-weather-button' text="Submit" handleClick={this.getWeather("dogs")} />
       </div>
     );
   }
-}
+} //end of big function
 
 module.exports = GetWeather;
