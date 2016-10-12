@@ -1,6 +1,5 @@
 $main-background: linear-gradient(to bottom, rgb(145, 244, 241), rgb(181, 224, 238));
-
-@mixin body-core-styling {
-  background: $main-background;
-  background-size: auto 1500px;
-}
+$headline-default: 40px;
+$subheader-font-size: 20px;
+$center-element-horiz: margin auto;
+$standard-nav-item-left-right-margin: 20px;

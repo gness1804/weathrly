@@ -8,11 +8,46 @@
     https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css"/>
     <!--Google fonts link if wanted, available from https://fonts.google.com -->
     <link rel="stylesheet" style="text/css" href="styles.css"/>
-    <title></title>
+    <title>Weathrly: Your World, Your Weather.</title>
   </head>
   <body>
-    <h1>Welcome to Weathrly!</h1>
-
+    <header>
+      <h1>Welcome to Weathrly!</h1>
+      <h3>Weathrly: Your World, Your Weather.</h3>
+      <nav>
+        <ul>
+          <li class="nav-bar-item">Cities</li>
+          <li class="nav-bar-item">Current Warnings</li>
+          <li class="nav-bar-item">Driving Conditions</li>
+          <li class="nav-bar-item">Cool Links</li>
+        </ul>
+      </nav>
+    </header>
+    <fieldset>
+      <label for="current-location-input" class="fieldset-left-item">Your Current Location:
+      <input id="current-location-input" type="text" placeholder="City" list="current-loc-list">
+      <datalist id="current-loc-list">
+        <option value="San Diego"></option>
+        <option value="Denver"></option>
+        <option value="San Francisco"></option>
+        <option value="Castle Rock"></option>
+      </datalist>
+      </label>
+      <label for="desired-location-input" class="fieldset-right-item">Your Desired Location:
+      <input id="desired-location-input" type="text" placeholder="City" list="desired-loc-list">
+      <datalist id="desired-loc-list">
+        <option value="San Diego"></option>
+        <option value="Denver"></option>
+        <option value="San Francisco"></option>
+        <option value="Castle Rock"></option>
+      </datalist>
+      </label>
+    </fieldset>
+    <section class="weather-output">
+      <p>
+        
+      </p>
+    </section>
   <script src="main.bundle.js"></script>
   </body>
 </html>

@@ -1,5 +1,46 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 body {
   @include body-core-styling;
 }
+
+header {
+  text-align: center;
+
+  h1 {
+    @include boilerplate-headline;
+  }
+  h3 {
+    font-size: $subheader-font-size;
+    font-style: italic;
+    @include center-contained-items-horiz;
+  }
+  nav {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @include center-item-horiz;
+  }
+
+  .nav-bar-item{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: $standard-nav-item-left-right-margin;
+    margin-right: $standard-nav-item-left-right-margin;
+  }
+
+} //end of header
+
+fieldset {
+
+  border: none;
+
+  .fieldset-left-item {
+    margin-right: 120px;
+  }
+
+  .fieldset-right-item {
+    margin-left: 120px;
+  }
+
+} //end of fieldset
