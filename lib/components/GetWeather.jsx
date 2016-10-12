@@ -1,11 +1,22 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
+const React = require('react');
+const ReactDOM = require('react-dom');
+const WeatherButton = require('./WeatherButton.jsx');
 
 class GetWeather extends React.Component {
   constructor() {
     super();
     this.state = { location: ''};
   }
+
+  function getWeather() {
+    $.get("http://weatherly-api.herokuapp.com/api/weather", function( data ) {
+      $(".weather-output p").text("It will be " + data[0].weatherType.type + " " + "on" + " " + data[0].date);
+    });
+  }
+
+  this.setState = {location:}
+
+  // getWeather();
 
   render() {
     return(
