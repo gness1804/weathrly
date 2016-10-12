@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 body {
   @include body-core-styling;
@@ -40,4 +41,4 @@ fieldset {
     margin-left: 120px;
   }
 
-}
+} //end of fieldset

@@ -3,22 +3,3 @@ $headline-default: 40px;
 $subheader-font-size: 20px;
 $center-element-horiz: margin auto;
 $standard-nav-item-left-right-margin: 20px;
-
-@mixin body-core-styling {
-  background: $main-background;
-  background-size: auto 1500px;
-}
-
-@mixin boilerplate-headline {
-  font-size: $headline-default;
-  text-align: center;
-}
-
-@mixin center-item-horiz {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@mixin center-contained-items-horiz {
-  text-align: center;
-}
