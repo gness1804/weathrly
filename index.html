@@ -25,7 +25,13 @@
     </header>
     <fieldset>
       <label for="current-location-input" class="fieldset-left-item">Your Current Location:
-      <input id="current-location-input" type="text" placeholder="City">
+      <input id="current-location-input" type="text" placeholder="City" list="current-loc-list">
+      <datalist id="current-loc-list">
+        <option value="San Diego"></option>
+        <option value="Denver"></option>
+        <option value="San Francisco"></option>
+        <option value="Castle Rock"></option>
+      </datalist>
       </label>
       <label for="desired-location-input" class="fieldset-right-item">Your Desired Location:
       <input id="desired-location-input" type="text" placeholder="City" list="desired-loc-list">
