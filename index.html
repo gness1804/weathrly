@@ -13,7 +13,7 @@
   <body>
     <header>
       <h1>Welcome to Weathrly!</h1>
-      <h3>Weatherly: Your World, Your Weather.</h3>
+      <h3>Weathrly: Your World, Your Weather.</h3>
       <nav>
         <ul>
           <li class="nav-bar-item">Cities</li>
@@ -28,7 +28,10 @@
       <input id="current-location-input" type="text" placeholder="City">
       </label>
       <label for="desired-location-input" class="fieldset-right-item">Your Desired Location:
-      <input id="desired-location-input" type="text" placeholder="City">
+      <input id="desired-location-input" type="text" placeholder="City" list="desired-loc-list">
+      <datalist id="desired-loc-list">
+        <option value="San Diego"></option>
+      </datalist>
       </label>
     </fieldset>
   <script src="main.bundle.js"></script>
