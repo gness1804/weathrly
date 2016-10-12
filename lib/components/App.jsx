@@ -1,20 +1,14 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const GetWeather = require('./GetWeather.jsx')
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = { location: ''};
-  }
-
   render() {
     return(
-      <div>
-        HEY
-      </div>
-    );
+<GetWeather />
+    )
   }
 }
+ReactDOM.render(<App />, document.getElementById('application'));
 
-
-ReactDOM.render(<App/>, document.querySelector('.application'));
+module.exports = App
