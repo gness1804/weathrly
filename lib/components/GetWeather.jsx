@@ -40,8 +40,9 @@ class GetWeather extends React.Component {
 
   } //end of showWeatherData
 
-  handleInputChange(){
-    console.log("dogs");
+  handleInputChange(e){
+    this.setState({location: e.target.value});
+    console.log(this.state.location);
   } //end of handleInputChange
 
   render () {
@@ -61,7 +62,7 @@ class GetWeather extends React.Component {
         </header>
         <fieldset>
           <label for="current-location-input" class="fieldset-left-item">Your Current Location:
-          <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange}>
+          <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)}>
           </input>
           <datalist id="current-loc-list">
             <option value="San Diego"></option>
