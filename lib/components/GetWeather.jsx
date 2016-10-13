@@ -9,6 +9,8 @@ class GetWeather extends React.Component {
   }
 
   showWeatherData(city) {
+    let city1 = city;
+    console.log(city);
     let min;
     let max;
     if (city === "Denver") {
@@ -72,7 +74,7 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Castle Rock")} />
+           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Amy")} />
            <div>{this.state.dayOne}</div>
       </div>
     );
