@@ -42,7 +42,7 @@ class GetWeather extends React.Component {
 
   handleInputChange(e){
     this.setState({location: e.target.value});
-    console.log(this.state.location);
+    var location = this.state.location;
   } //end of handleInputChange
 
   render () {
