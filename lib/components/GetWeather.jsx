@@ -8,9 +8,9 @@ class GetWeather extends React.Component {
     this.state = {dayOne: props.dayOne, location: props.location};
   }
 
-  showWeatherData(city) {
-    let city1 = this.state.location;
-    console.log(city1);
+  showWeatherData() {
+    let city = this.state.location;
+    // console.log(city);
     let min;
     let max;
     if (city === "Denver") {
@@ -44,7 +44,7 @@ class GetWeather extends React.Component {
 
   handleInputChange(e){
     this.setState({location: e.target.value});
-    console.log(this.state.location);
+    // console.log(this.state.location);
   } //end of handleInputChange
 
   render () {
@@ -74,7 +74,7 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Amy")} />
+           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this)} />
            <div>{this.state.dayOne}</div>
       </div>
     );
