@@ -1,5 +1,7 @@
 weathrly
 
+[Jhun's API Link](http://weatherly-api.herokuapp.com/api/weather)
+
 Context
 
 It’s important to know what Mother Nature is going to throw at you each day – what if you wear flip flops because it’s sunny and 65 degrees in the morning and then it snows all afternoon (this is Colorado, after all).

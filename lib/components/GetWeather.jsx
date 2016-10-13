@@ -21,7 +21,7 @@ class GetWeather extends React.Component {
 
       // that.setState({location: "The weather on" + " " + data[0].date + " will be" + " " + data[0].weatherType.type});
 
-    });
+    }); //end of get function
 
 
   } //end of showWeatherData
