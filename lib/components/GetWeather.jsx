@@ -23,6 +23,10 @@ class GetWeather extends React.Component {
       min = 17;
       max = 26;
     }
+    else if (city === "Castle Rock") {
+      min = 26;
+      max = 35;
+    }
     let that = this;
 
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
@@ -76,7 +80,7 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "San Francisco")} />
+           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Castle Rock")} />
            <div>{this.state.dayOne}</div>
       </div>
     );
