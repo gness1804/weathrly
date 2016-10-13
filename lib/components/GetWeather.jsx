@@ -5,7 +5,7 @@ const WeatherButton = require('./WeatherButton.jsx');
 class GetWeather extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {dayOne: props.dayOne};
+    this.state = {dayOne: props.dayOne, dayTwo: props.dayTwo};
   }
 
   showWeatherData(num) {
@@ -16,6 +16,7 @@ class GetWeather extends React.Component {
       for (var i = 0; i < data.length; i++) {
         // console.log(data[i]);
         that.setState({dayOne: "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type});
+        that.setState({dayTwo: "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type});
       }
 
       // that.setState({location: "The weather on" + " " + data[0].date + " will be" + " " + data[0].weatherType.type});
@@ -66,6 +67,7 @@ class GetWeather extends React.Component {
         </fieldset>
            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Amy")} />
            <div>{this.state.dayOne}</div>
+           <div>{this.state.dayTwo}</div>
       </div>
     );
   }
