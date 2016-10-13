@@ -2,8 +2,6 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const WeatherButton = require('./WeatherButton.jsx');
 
-// let city = document.querySelector("#current-location-input");
-
 class GetWeather extends React.Component {
   constructor(props) {
     super(props);
@@ -60,7 +58,7 @@ class GetWeather extends React.Component {
         </header>
         <fieldset>
           <label for="current-location-input" class="fieldset-left-item">Your Current Location:
-          <input id="current-location-input" type="text" placeholder="City" list="current-loc-list">
+          <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange}>
           </input>
           <datalist id="current-loc-list">
             <option value="San Diego"></option>
