@@ -14,12 +14,12 @@ class GetWeather extends React.Component {
     // this.setState({location: num});
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
       // console.log(data[0]);
-      that.setState({location: data[0].weatherType.type});
+      that.setState({location: "The weather on" + " " + data[0].date + " will be" + " " + data[0].weatherType.type});
 
     });
 
 
-  }
+  } //end of showWeatherData
 
 
 
@@ -61,7 +61,7 @@ class GetWeather extends React.Component {
           </label>
         </fieldset>
            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Amy")} />
-           <div>The weather today is: {this.state.location}</div>
+           <div>{this.state.location}</div>
       </div>
     );
   }
