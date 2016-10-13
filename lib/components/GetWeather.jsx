@@ -5,7 +5,7 @@ const WeatherButton = require('./WeatherButton.jsx');
 class GetWeather extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {dayOne: props.dayOne, dayTwo: props.dayTwo};
+    this.state = {dayOne: props.dayOne};
   }
 
   showWeatherData(city) {
@@ -15,12 +15,16 @@ class GetWeather extends React.Component {
       min = 0;
       max = 7;
     }
+    else if (city === "San Diego") {
+      min = 8;
+      max = 17;
+    }
     let that = this;
-    
+
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
       let text = "";
       for (var i = min; i < max; i++) {
-        text = text + "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type;
+        text = text + "In " + data[i].location + "," + " the weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type;
       }
       that.setState({dayOne: text});
 
@@ -68,9 +72,8 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Denver")} />
+           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "San Diego")} />
            <div>{this.state.dayOne}</div>
-           <div>{this.state.dayTwo}</div>
       </div>
     );
   }
