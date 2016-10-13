@@ -8,8 +8,8 @@ class GetWeather extends React.Component {
     this.state = {location: props.initialLocation};
   }
 
-  showWeatherData() {
-    console.log("dogs");
+  showWeatherData(num) {
+    console.log(num);
   }
 
   render () {
@@ -39,7 +39,7 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, 1)} />
+           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, 17)} />
       </div>
     );
   }
