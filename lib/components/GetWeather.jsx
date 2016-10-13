@@ -13,7 +13,10 @@ class GetWeather extends React.Component {
 
     // this.setState({location: num});
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
-      // console.log(data[0]);
+      for (var i = 0; i < data.length; i++) {
+        console.log(data[i]);
+      }
+
       that.setState({location: "The weather on" + " " + data[0].date + " will be" + " " + data[0].weatherType.type});
 
     });
