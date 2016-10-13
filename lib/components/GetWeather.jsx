@@ -9,8 +9,22 @@ class GetWeather extends React.Component {
   }
 
   showWeatherData(num) {
+
+    $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
+      console.log(data);
+    });
+
     this.setState({location: num});
+
   }
+
+
+
+ //  function getWeather() {
+ // //   $.get("http://weatherly-api.herokuapp.com/api/weather", function( data ) {
+ // //     $(".weather-output p").text("It will be " + data[0].weatherType.type + " " + "on" + " " + data[0].date);
+ // //   });
+ // // }
 
  //  addToLikesCount (num) {
  // //     this.setState( {count: this.state.count + num } )
@@ -43,7 +57,7 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "dogs")} />
+           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Amy")} />
            <div>The weather today is: {this.state.location}</div>
       </div>
     );
