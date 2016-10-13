@@ -9,8 +9,8 @@ class GetWeather extends React.Component {
   }
 
   showWeatherData(city) {
-    let city1 = city;
-    console.log(city);
+    let city1 = this.state.location;
+    console.log(city1);
     let min;
     let max;
     if (city === "Denver") {
