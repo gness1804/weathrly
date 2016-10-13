@@ -5,11 +5,11 @@ const GetWeather = require('./GetWeather.jsx')
 class App extends React.Component {
   render() {
     return(
-<GetWeather dayOne="Click to see your weather."/>
+<GetWeather dayOne="Click to see your weather." dayTwo=""/>
 // <LikesCounter initialCount={0}/>
     )
   }
-}
+} //end of App
 
 ReactDOM.render(<App />, document.getElementById('application'));
 

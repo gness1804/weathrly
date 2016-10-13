@@ -5,7 +5,7 @@ const WeatherButton = require('./WeatherButton.jsx');
 class GetWeather extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {location: props.dayOne};
+    this.state = {dayOne: props.dayOne};
   }
 
   showWeatherData(num) {
@@ -15,7 +15,7 @@ class GetWeather extends React.Component {
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
       for (var i = 0; i < data.length; i++) {
         // console.log(data[i]);
-        that.setState({location: "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type});
+        that.setState({dayOne: "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type});
       }
 
       // that.setState({location: "The weather on" + " " + data[0].date + " will be" + " " + data[0].weatherType.type});
@@ -65,7 +65,7 @@ class GetWeather extends React.Component {
           </label>
         </fieldset>
            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Amy")} />
-           <div>{this.state.location}</div>
+           <div>{this.state.dayOne}</div>
       </div>
     );
   }
