@@ -5,10 +5,12 @@ const GetWeather = require('./GetWeather.jsx')
 class App extends React.Component {
   render() {
     return(
-<GetWeather />
+<GetWeather initialLocation="Denver"/>
+// <LikesCounter initialCount={0}/>
     )
   }
 }
+
 ReactDOM.render(<App />, document.getElementById('application'));
 
-module.exports = App
+module.exports = App;
