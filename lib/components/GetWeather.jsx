@@ -10,17 +10,13 @@ class GetWeather extends React.Component {
 
   showWeatherData(num) {
     let that = this;
-
-    // this.setState({location: num});
+    //will need to refine this function according to which city they choose
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
       let text = "";
       for (var i = 0; i < data.length; i++) {
-        // that.setState({dayOne: "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type});
-        // that.setState({dayTwo: "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type});
         text = text + "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type;
       }
       that.setState({dayOne: text});
-      // that.setState({location: "The weather on" + " " + data[0].date + " will be" + " " + data[0].weatherType.type});
 
     }); //end of get function
 
