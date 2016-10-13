@@ -9,12 +9,14 @@ class GetWeather extends React.Component {
   }
 
   showWeatherData(num) {
-
-    $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
-      console.log(data[0]);
-    });
-
+    let that = this;
     this.setState({location: num});
+    // $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
+    //   // console.log(data[0]);
+    //   that.setState({location: data[0]});
+    //
+    // });
+
 
   }
 
