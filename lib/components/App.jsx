@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return(
 <GetWeather dayOne="Click to see your weather."/>
-// <LikesCounter initialCount={0}/>
+
     )
   }
 } //end of App
