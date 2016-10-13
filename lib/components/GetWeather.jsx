@@ -5,7 +5,7 @@ const WeatherButton = require('./WeatherButton.jsx');
 class GetWeather extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {dayOne: props.dayOne};
+    this.state = {dayOne: props.dayOne, location: props.location};
   }
 
   showWeatherData(city) {
@@ -42,6 +42,7 @@ class GetWeather extends React.Component {
 
   handleInputChange(e){
     this.setState({location: e.target.value});
+    console.log(this.state.location);
   } //end of handleInputChange
 
   render () {

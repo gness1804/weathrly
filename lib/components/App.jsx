@@ -5,7 +5,7 @@ const GetWeather = require('./GetWeather.jsx');
 class App extends React.Component {
   render() {
     return(
-<GetWeather dayOne="Click to see your weather."/>
+<GetWeather dayOne="Click to see your weather." location="Denver"/>
 
     )
   }
