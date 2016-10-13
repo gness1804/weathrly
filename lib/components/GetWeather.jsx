@@ -38,8 +38,11 @@ class GetWeather extends React.Component {
 
     }); //end of get function
 
-
   } //end of showWeatherData
+
+  handleInputChange(){
+    console.log("dogs");
+  } //end of handleInputChange
 
   render () {
     return (
