@@ -2,6 +2,8 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const WeatherButton = require('./WeatherButton.jsx');
 
+// let city = document.querySelector("#current-location-input");
+
 class GetWeather extends React.Component {
   constructor(props) {
     super(props);
@@ -68,7 +70,7 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "San Diego")} />
+           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Castle Rock")} />
            <div>{this.state.dayOne}</div>
       </div>
     );
