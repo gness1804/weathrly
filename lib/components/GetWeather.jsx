@@ -9,7 +9,7 @@ class GetWeather extends React.Component {
   }
 
   showWeatherData(num) {
-    this.setState({location: this.state.location + num});
+    this.setState({location: num});
   }
 
  //  addToLikesCount (num) {
@@ -33,7 +33,7 @@ class GetWeather extends React.Component {
         </header>
         <fieldset>
           <label for="current-location-input" class="fieldset-left-item">Your Current Location:
-          <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" value="Denver">
+          <input id="current-location-input" type="text" placeholder="City" list="current-loc-list">
           </input>
           <datalist id="current-loc-list">
             <option value="San Diego"></option>
@@ -44,6 +44,7 @@ class GetWeather extends React.Component {
           </label>
         </fieldset>
            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "dogs")} />
+           <div>The weather today is: {this.state.location}</div>
       </div>
     );
   }
