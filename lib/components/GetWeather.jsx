@@ -8,7 +8,9 @@ class GetWeather extends React.Component {
     this.state = {location: props.initialLocation};
   }
 
-  //function to change location like addToLikesCount
+  showWeatherData() {
+    console.log("dogs");
+  }
 
   render () {
     return (
@@ -37,7 +39,7 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={console.log("dogs")} />
+           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, 1)} />
       </div>
     );
   }
