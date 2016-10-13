@@ -17,7 +17,7 @@ class GetWeather extends React.Component {
       for (var i = 0; i < data.length; i++) {
         // that.setState({dayOne: "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type});
         // that.setState({dayTwo: "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type});
-        text = text + data[i].date + "<br>";
+        text = text + "The weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type;
       }
       that.setState({dayOne: text});
       // that.setState({location: "The weather on" + " " + data[0].date + " will be" + " " + data[0].weatherType.type});
