@@ -5,8 +5,19 @@ const WeatherButton = require('./WeatherButton.jsx');
 class GetWeather extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {dayOne: props.dayOne, location: props.location};
+    this.state = {
+      dayOne: props.dayOne,
+      location: props.location};
   }
+
+  componentDidMount() {
+    //retrieve items from local storage
+  }
+
+  // componentDidMount() {
+  //   const items = JSON.parse(localStorage.getItem('ideas'));
+  //   this.setState({ ideas: items ? items : [] });
+  // }
 
   showWeatherData() {
     let city = this.state.location;
