@@ -17,27 +17,30 @@ class GetWeather extends React.Component {
   }
 
   showWeatherData() {
-    let city = this.state.location;
+    let city = this.state.location.toUpperCase();
     let min;
     let max;
 
     this.setLocalStorage(this.state.location);
 
-    if (city === "Denver") {
+    if (city === "DENVER") {
       min = 0;
       max = 8;
     }
-    else if (city === "San Diego") {
+    else if (city === "SAN DIEGO") {
       min = 8;
       max = 17;
     }
-    else if (city === "San Francisco") {
+    else if (city === "SAN FRANCISCO") {
       min = 17;
       max = 26;
     }
-    else if (city === "Castle Rock") {
+    else if (city === "CASTLE ROCK") {
       min = 26;
       max = 35;
+    }
+    else {
+      //do something else; maybe send them to an external weather site with the city name entered in?
     }
 
     let that = this;
