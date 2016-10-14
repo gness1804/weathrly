@@ -10,7 +10,6 @@ class GetWeather extends React.Component {
 
   showWeatherData() {
     let city = this.state.location;
-    // console.log(city);
     let min;
     let max;
     if (city === "Denver") {
@@ -44,8 +43,11 @@ class GetWeather extends React.Component {
 
   handleInputChange(e){
     this.setState({location: e.target.value});
-    // console.log(this.state.location);
   } //end of handleInputChange
+
+  toLocalStorage() {
+    localStorage.setItem("location", JSON.stringify(this.state.location));
+  }
 
   render () {
     return (

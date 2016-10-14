@@ -13,16 +13,3 @@ class WeatherButton extends React.Component {
 } //end of WeatherButton
 
 module.exports = WeatherButton;
-
-
-// class ActionButton extends React.Component {
-//   render () {
-//     return (
-//       <button className="ActionButton" id = {this.props.id} onClick={this.props.handleClick}>
-//         <span>{this.props.text}</span>
-//       </button>
-//     )
-//   }
-// }
-//
-// module.exports = ActionButton
