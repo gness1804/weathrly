@@ -89,7 +89,7 @@ class GetWeather extends React.Component {
           </label>
         </fieldset>
            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this)} />
-           <div>{this.state.text}</div>
+           <div className="weather-text">{this.state.text}</div>
       </div>
     );
   }
