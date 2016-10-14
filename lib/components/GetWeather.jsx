@@ -5,13 +5,15 @@ const WeatherButton = require('./WeatherButton.jsx');
 class GetWeather extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       text: props.text,
       location: props.location};
   }
 
   componentDidMount() {
-    //retrieve items from local storage
+    const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
+    console.log(mostRecentLocation);
   }
 
   // componentDidMount() {
@@ -23,6 +25,9 @@ class GetWeather extends React.Component {
     let city = this.state.location;
     let min;
     let max;
+
+    this.setLocalStorage(this.state.location);
+
     if (city === "Denver") {
       min = 0;
       max = 8;
@@ -39,6 +44,7 @@ class GetWeather extends React.Component {
       min = 26;
       max = 35;
     }
+
     let that = this;
 
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
@@ -56,7 +62,7 @@ class GetWeather extends React.Component {
     this.setState({location: e.target.value});
   } //end of handleInputChange
 
-  toLocalStorage() {
+  setLocalStorage() {
     localStorage.setItem("location", JSON.stringify(this.state.location));
   }
 
