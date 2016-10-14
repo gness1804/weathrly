@@ -69,15 +69,15 @@ class GetWeather extends React.Component {
           <h3>Your World, Your Weather.</h3>
           <nav>
             <ul>
-              <li class="nav-bar-item">Cities</li>
-              <li class="nav-bar-item">Current Warnings</li>
-              <li class="nav-bar-item">Driving Conditions</li>
-              <li class="nav-bar-item">Cool Links</li>
+              <li className="nav-bar-item">Cities</li>
+              <li className="nav-bar-item">Current Warnings</li>
+              <li className="nav-bar-item">Driving Conditions</li>
+              <li className="nav-bar-item">Cool Links</li>
             </ul>
           </nav>
         </header>
         <fieldset>
-          <label for="current-location-input" class="fieldset-left-item">Your Current Location:
+          <label htmlFor="current-location-input" className="fieldset-left-item">Your Current Location:
           <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)} value={this.state.location}>
           </input>
           <datalist id="current-loc-list">
@@ -89,7 +89,7 @@ class GetWeather extends React.Component {
           </label>
         </fieldset>
            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this)} />
-           <div>{this.state.text}</div>
+           <div className="weather-text">{this.state.text}</div>
       </div>
     );
   }
