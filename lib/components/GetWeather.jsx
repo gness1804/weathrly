@@ -9,7 +9,9 @@ class GetWeather extends React.Component {
     this.state = {
       text: props.text,
       location: props.location,
-      extremeWeather: props.extremeWeather};
+      extremeWeather: props.extremeWeather,
+      //data: ""; pass items from data into a new dynamic HTML 
+    };
   }
 
   componentDidMount() {
