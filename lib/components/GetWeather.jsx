@@ -12,8 +12,8 @@ class GetWeather extends React.Component {
   }
 
   componentDidMount() {
-    const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
-    this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"});
+    // const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
+    // this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"});
   }
 
   showWeatherData() {
@@ -21,7 +21,7 @@ class GetWeather extends React.Component {
     let min;
     let max;
 
-    this.setLocalStorage(this.state.location);
+    // this.setLocalStorage(this.state.location);
 
     if (city === "Denver") {
       min = 0;
@@ -57,9 +57,9 @@ class GetWeather extends React.Component {
     this.setState({location: e.target.value});
   } //end of handleInputChange
 
-  setLocalStorage() {
-    localStorage.setItem("location", JSON.stringify(this.state.location));
-  }
+  // setLocalStorage() {
+  //   localStorage.setItem("location", JSON.stringify(this.state.location));
+  // }
 
   render () {
     return (
