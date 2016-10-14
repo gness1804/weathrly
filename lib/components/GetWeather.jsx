@@ -51,7 +51,7 @@ class GetWeather extends React.Component {
       let text = "";
       let warning = "";
       for (var i = min; i < max; i++) {
-        let percentChance = data[i].weatherType.chance * 100;
+        let percentChance = Math.floor(data[i].weatherType.chance * 100);
         let extremeCondition = data[i].weatherType.type;
         text = text + "In " + data[i].location + "," + " the weather on" + " " + data[i].date + " will be" + " " + percentChance + " percent chance of " + data[i].weatherType.type + "." + " The high will be " + data[i].temp.high + " " + "and the low will be " + data[i].temp.low + "." + " ";
         if (data[i].weatherType.scale === 3) {
