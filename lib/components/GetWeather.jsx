@@ -65,8 +65,8 @@ class GetWeather extends React.Component {
     return (
       <div className="GetWeather">
         <header>
-          <h1>Welcome to Weathrly!</h1>
-          <h3>Weathrly: Your World, Your Weather.</h3>
+          <h1>Welcome to -Weathrly-</h1>
+          <h3>Your World, Your Weather.</h3>
           <nav>
             <ul>
               <li class="nav-bar-item">Cities</li>
