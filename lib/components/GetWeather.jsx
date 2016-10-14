@@ -40,7 +40,8 @@ class GetWeather extends React.Component {
       max = 35;
     }
     else {
-      //do something else; maybe send them to an external weather site with the city name entered in?
+      alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
+      //do something else; maybe send them to an external weather site with the city name entered in or pulling in a real api like that of weather underground?
     }
 
     let that = this;
