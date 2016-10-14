@@ -48,13 +48,6 @@
 
 	__webpack_require__(1);
 	__webpack_require__(5);
-	// function getWeather() {
-	//   $.get("http://weatherly-api.herokuapp.com/api/weather", function( data ) {
-	//     $(".weather-output p").text("It will be " + data[0].weatherType.type + " " + "on" + " " + data[0].date);
-	//   });
-	// }
-	//
-	// getWeather();
 
 /***/ },
 /* 1 */
@@ -433,12 +426,12 @@
 	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
-	      return React.createElement(GetWeather, null);
+	      return React.createElement(GetWeather, { text: 'Click to see your weather.', location: '' });
 	    }
 	  }]);
 
 	  return App;
-	}(React.Component);
+	}(React.Component); //end of App
 
 	ReactDOM.render(React.createElement(App, null), document.getElementById('application'));
 
@@ -21862,20 +21855,74 @@
 
 	var React = __webpack_require__(6);
 	var ReactDOM = __webpack_require__(39);
+	var WeatherButton = __webpack_require__(178);
 
 	var GetWeather = function (_React$Component) {
 	  _inherits(GetWeather, _React$Component);
 
-	  function GetWeather() {
+	  function GetWeather(props) {
 	    _classCallCheck(this, GetWeather);
 
-	    var _this = _possibleConstructorReturn(this, (GetWeather.__proto__ || Object.getPrototypeOf(GetWeather)).call(this));
+	    var _this = _possibleConstructorReturn(this, (GetWeather.__proto__ || Object.getPrototypeOf(GetWeather)).call(this, props));
 
-	    _this.state = { location: '' };
+	    _this.state = {
+	      text: props.text,
+	      location: props.location };
 	    return _this;
 	  }
 
 	  _createClass(GetWeather, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var mostRecentLocation = JSON.parse(localStorage.getItem("location"));
+	      this.setState({ location: mostRecentLocation ? mostRecentLocation : "Denver" });
+	    }
+	  }, {
+	    key: 'showWeatherData',
+	    value: function showWeatherData() {
+	      var city = this.state.location;
+	      var min = void 0;
+	      var max = void 0;
+
+	      this.setLocalStorage(this.state.location);
+
+	      if (city === "Denver") {
+	        min = 0;
+	        max = 8;
+	      } else if (city === "San Diego") {
+	        min = 8;
+	        max = 17;
+	      } else if (city === "San Francisco") {
+	        min = 17;
+	        max = 26;
+	      } else if (city === "Castle Rock") {
+	        min = 26;
+	        max = 35;
+	      }
+
+	      var that = this;
+
+	      $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
+	        var text = "";
+	        for (var i = min; i < max; i++) {
+	          text = text + "In " + data[i].location + "," + " the weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type;
+	        }
+	        that.setState({ text: text });
+	      }); //end of get function
+	    } //end of showWeatherData
+
+	  }, {
+	    key: 'handleInputChange',
+	    value: function handleInputChange(e) {
+	      this.setState({ location: e.target.value });
+	    } //end of handleInputChange
+
+	  }, {
+	    key: 'setLocalStorage',
+	    value: function setLocalStorage() {
+	      localStorage.setItem("location", JSON.stringify(this.state.location));
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return React.createElement(
@@ -21930,7 +21977,7 @@
 	            'label',
 	            { 'for': 'current-location-input', 'class': 'fieldset-left-item' },
 	            'Your Current Location:',
-	            React.createElement('input', { id: 'current-location-input', type: 'text', placeholder: 'City', list: 'current-loc-list', value: 'Denver' }),
+	            React.createElement('input', { id: 'current-location-input', type: 'text', placeholder: 'City', list: 'current-loc-list', onChange: this.handleInputChange.bind(this), value: this.state.location }),
 	            React.createElement(
 	              'datalist',
 	              { id: 'current-loc-list' },
@@ -21941,19 +21988,67 @@
 	            )
 	          )
 	        ),
+	        React.createElement(WeatherButton, { id: 'get-weather-button', text: 'Get Weather', handleClick: this.showWeatherData.bind(this) }),
 	        React.createElement(
-	          'button',
-	          { id: 'get-weather-button', type: 'button' },
-	          'Get Weather'
+	          'div',
+	          null,
+	          this.state.text
 	        )
 	      );
 	    }
 	  }]);
 
 	  return GetWeather;
-	}(React.Component);
+	}(React.Component); //end of GetWeather
 
 	module.exports = GetWeather;
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var React = __webpack_require__(6);
+	var ReactDOM = __webpack_require__(39);
+
+	var WeatherButton = function (_React$Component) {
+	  _inherits(WeatherButton, _React$Component);
+
+	  function WeatherButton() {
+	    _classCallCheck(this, WeatherButton);
+
+	    return _possibleConstructorReturn(this, (WeatherButton.__proto__ || Object.getPrototypeOf(WeatherButton)).apply(this, arguments));
+	  }
+
+	  _createClass(WeatherButton, [{
+	    key: 'render',
+	    value: function render() {
+
+	      return React.createElement(
+	        'button',
+	        { className: 'WeatherButton', id: this.props.id, onClick: this.props.handleClick },
+	        React.createElement(
+	          'span',
+	          null,
+	          this.props.text
+	        )
+	      );
+	    }
+	  }]);
+
+	  return WeatherButton;
+	}(React.Component); //end of WeatherButton
+
+	module.exports = WeatherButton;
 
 /***/ }
 /******/ ]);
