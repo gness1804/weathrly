@@ -13,13 +13,8 @@ class GetWeather extends React.Component {
 
   componentDidMount() {
     const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
-    console.log(mostRecentLocation);
+    this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"});
   }
-
-  // componentDidMount() {
-  //   const items = JSON.parse(localStorage.getItem('ideas'));
-  //   this.setState({ ideas: items ? items : [] });
-  // }
 
   showWeatherData() {
     let city = this.state.location;
