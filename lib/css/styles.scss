@@ -1,25 +1,52 @@
 @import "variables.scss";
 @import "mixins.scss";
+@import "reset.scss";
 
 body {
-  @include body-core-styling;
+  background-color: $light-grey;
+}
+
+h1, h3, p, button, label, input, option, li {
+  font-family: $main-font;
+}
+
+input {
+  @include center-contained-items-horiz
+}
+
+fieldset {
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 2px;
 }
 
 header {
-  text-align: center;
+  background-color: $indigo;
+}
 
   h1 {
     @include boilerplate-headline;
+    color: $white;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin: 20px;
   }
+
   h3 {
     font-size: $subheader-font-size;
     font-style: italic;
+    color: $dark-grey;
+    // padding-bottom: 5px;
+    font-size: 24px;
+    font-weight: 400;
     @include center-contained-items-horiz;
   }
+
   nav {
     margin-top: 50px;
     margin-bottom: 50px;
-    @include center-item-horiz;
+    text-align: center;
   }
 
   .nav-bar-item{
@@ -29,7 +56,26 @@ header {
     margin-right: $standard-nav-item-left-right-margin;
   }
 
-} //end of header
+
+button {
+  background-color: $indigo;
+  border: solid 2px;
+  border-radius: 8px;
+  color: $dark-grey;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: 150px;
+  height: 36px;
+  margin-left: 40%;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    cursor: pointer;
+  }
+};
+
 
 fieldset {
 
