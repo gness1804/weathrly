@@ -1,19 +1,32 @@
 @import "variables.scss";
 @import "mixins.scss";
+@import "reset.scss";
 
 body {
-  @include body-core-styling;
+  background-color: $light-grey;
 }
 
-header {
-  text-align: center;
+h1, h3, p, button, label, input, option, li {
+  font-family: $main-font;
+}
+
 
   h1 {
     @include boilerplate-headline;
+    color: $white;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin: 20px;
   }
+
   h3 {
     font-size: $subheader-font-size;
     font-style: italic;
+    color: $dark-grey;
+    // padding-bottom: 5px;
+    font-size: 24px;
+    font-weight: 400;
     @include center-contained-items-horiz;
   }
   nav {
@@ -29,7 +42,25 @@ header {
     margin-right: $standard-nav-item-left-right-margin;
   }
 
-} //end of header
+
+button {
+  background-color: $indigo;
+  border-style: none;
+  border-radius: 2px;
+  color: $dark-grey;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 93px;
+  height: 36px;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    cursor: pointer;
+  }
+};
+
 
 fieldset {
 
