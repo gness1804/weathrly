@@ -45,7 +45,8 @@ class GetWeather extends React.Component {
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
       let text = "";
       for (var i = min; i < max; i++) {
-        text = text + "In " + data[i].location + "," + " the weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type;
+        text = <div>{data[i].location}</div>
+        // text = text + "In " + data[i].location + "," + " the weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type;
       }
       that.setState({text: text});
 
