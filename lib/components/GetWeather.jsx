@@ -5,10 +5,12 @@ const WeatherButton = require('./WeatherButton.jsx');
 class GetWeather extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {dayOne: props.dayOne};
+    this.state = {dayOne: props.dayOne, location: props.location};
   }
 
-  showWeatherData(city) {
+  showWeatherData() {
+    let city = this.state.location;
+    // console.log(city);
     let min;
     let max;
     if (city === "Denver") {
@@ -42,7 +44,7 @@ class GetWeather extends React.Component {
 
   handleInputChange(e){
     this.setState({location: e.target.value});
-    var location = this.state.location;
+    // console.log(this.state.location);
   } //end of handleInputChange
 
   render () {
@@ -62,7 +64,7 @@ class GetWeather extends React.Component {
         </header>
         <fieldset>
           <label for="current-location-input" class="fieldset-left-item">Your Current Location:
-          <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)}>
+          <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)} value={this.state.location}>
           </input>
           <datalist id="current-loc-list">
             <option value="San Diego"></option>
@@ -72,7 +74,7 @@ class GetWeather extends React.Component {
           </datalist>
           </label>
         </fieldset>
-           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this, "Castle Rock")} />
+           <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this)} />
            <div>{this.state.dayOne}</div>
       </div>
     );
