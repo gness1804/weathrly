@@ -77,7 +77,7 @@ class GetWeather extends React.Component {
           </nav>
         </header>
         <fieldset>
-          <label for="current-location-input" className="fieldset-left-item">Your Current Location:
+          <label htmlFor="current-location-input" className="fieldset-left-item">Your Current Location:
           <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)} value={this.state.location}>
           </input>
           <datalist id="current-loc-list">
