@@ -6,7 +6,7 @@ class GetWeather extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dayOne: props.dayOne,
+      text: props.text,
       location: props.location};
   }
 
@@ -46,7 +46,7 @@ class GetWeather extends React.Component {
       for (var i = min; i < max; i++) {
         text = text + "In " + data[i].location + "," + " the weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type;
       }
-      that.setState({dayOne: text});
+      that.setState({text: text});
 
     }); //end of get function
 
@@ -88,7 +88,7 @@ class GetWeather extends React.Component {
           </label>
         </fieldset>
            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this)} />
-           <div>{this.state.dayOne}</div>
+           <div>{this.state.text}</div>
       </div>
     );
   }
