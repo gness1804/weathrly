@@ -13,7 +13,20 @@ class App extends React.Component {
 
   render () {
     return (
-      <div>Hi</div>
+      <div className="GetWeather">
+        <header>
+          <h1>Welcome to -Weathrly-</h1>
+          <h3>Your World, Your Weather.</h3>
+          <nav>
+            <ul>
+              <li className="nav-bar-item">Cities</li>
+              <li className="nav-bar-item">Current Warnings</li>
+              <li className="nav-bar-item">Driving Conditions</li>
+              <li className="nav-bar-item">Cool Links</li>
+            </ul>
+          </nav>
+        </header>
+      </div> //end of main div GetWeather
     );
   }
 } //end of App
