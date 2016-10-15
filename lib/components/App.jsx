@@ -13,24 +13,22 @@ class App extends React.Component {
 
   //componentDidMount restoring JSON
 
-  showWeatherData() { //when they click on submit
+  // showWeatherData() { //when they click on submit
+  //   let that = this;
+  //   $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
+  //     addWeatherToApp(data);
+  //   });
+  //   function addWeatherToApp(data) {
+  //     that.setState({weather: data});
+  //   }
+  // } //end of showWeatherData
+
+  getWeatherData() {
     let that = this;
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
-      addWeatherToApp(data);
+      that.setState({weather:data});
     });
-    function addWeatherToApp(data) {
-      that.setState({weather: data});
-    }
   }
-
-  // showWeatherData() {
- //     let that = this;
- //     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
- //       addWeatherToApp(data);
- //     });
- //     function addWeatherToApp(data) {
- //       that.setState({weather: data});
- //     }
 
   handleInputChange(e) { //when they enter data into location field
     this.setState({location: e.target.value});
@@ -63,10 +61,10 @@ class App extends React.Component {
                   </datalist>
                   </label>
                 </fieldset>
-            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this)} />
-            <WeatherList weekInfo={this.state.weather} city={this.state.location}/>
+            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={()=>this.getWeatherData()} />
+            <WeatherList data={this.state.weather}/>
 
-      </div> //end of main div GetWeather
+      </div> //end of GetWeather
     );
   }
 } //end of App
@@ -74,16 +72,20 @@ class App extends React.Component {
 class WeatherList extends React.Component {
   constructor(props) {
     super(props);
+    // let data = this.props.data;
+  }
+
+  showWeatherData(data) {
+    return(<div>{data.date}</div>);
   }
 
   render () {
     return (
       <ul>
-        <li>The weather will be {this.props.weekInfo}</li>
+        <li>{this.props.data.map(this.showWeatherData)}</li>
       </ul>
     );
   }
 } //end of WeatherList
 
 ReactDOM.render(<App title='Weathrly' />, document.querySelector('#application'));
-// ReactDOM.render(<ReactBox title='React to This'/>, document.querySelector('.application'));
