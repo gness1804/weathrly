@@ -13,7 +13,7 @@ class App extends React.Component {
 
   //componentDidMount restoring JSON
 
-  getWeatherData() {
+  getWeatherData() { //when they click on Get Weather button
     let that = this;
     let city = this.state.location.toUpperCase();
     if (city === "DENVER") {
@@ -36,7 +36,10 @@ class App extends React.Component {
         that.setState({weather:data});
       });
     }
-
+    else {
+      alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
+    }
+    localStorage.setItem("location", JSON.stringify(this.state.location));
   } //end of getWeatherData
 
   handleInputChange(e) { //when they enter data into location field
@@ -85,7 +88,7 @@ class WeatherList extends React.Component {
 
   showWeatherData(data) {
     return(<div>
-      On {data.date}, the weather in {data.location}
+      On {data.date}, the weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.
     </div>);
   }
 
