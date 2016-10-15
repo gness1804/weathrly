@@ -53,7 +53,7 @@ class GetWeather extends React.Component {
                         </label>
                       </fieldset>
                       <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this)} />
-                      <WeatherList weekInfo={this.state.weather}/>
+                      <WeatherList weekInfo={this.state.weather} city={this.state.location}/>
         </div> //end of GetWeather div
     );
   }

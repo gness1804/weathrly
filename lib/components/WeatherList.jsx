@@ -8,11 +8,16 @@ class WeatherList extends React.Component {
   constructor(props) {
     super(props);
     let info = this.props.weekInfo;
+    console.log(this.props.city);
   }
 
   render () {
     return (
-      <div>Dogs</div>
+      <div>
+        <ul>
+          <li>{}</li>
+        </ul>
+      </div>
     );
   }
 } //end of WeatherList
