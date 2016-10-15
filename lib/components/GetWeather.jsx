@@ -14,6 +14,10 @@ class GetWeather extends React.Component {
       this.setState({location: e.target.value});
     } //end of handleInputChange
 
+  showWeatherData(){
+    alert('hi');
+  }
+
   render () {
     return (
       <div className="GetWeather">
@@ -41,6 +45,7 @@ class GetWeather extends React.Component {
                         </datalist>
                         </label>
                       </fieldset>
+                      <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this)} />
         </div> //end of GetWeather div
     );
   }
