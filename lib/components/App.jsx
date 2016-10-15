@@ -13,7 +13,9 @@ class App extends React.Component {
 
   //componentDidMount restoring JSON
 
-
+  showWeatherData() {
+    alert('hi');
+  }
 
   handleInputChange(e) {
     this.setState({location: e.target.value});
