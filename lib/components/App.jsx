@@ -1,6 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-//require any other jsx files needed
+const WeatherButton = require('./WeatherButton.jsx');
 
 class App extends React.Component {
   constructor(props) {
@@ -12,6 +12,8 @@ class App extends React.Component {
   }
 
   //componentDidMount restoring JSON
+
+
 
   handleInputChange(e) {
     this.setState({location: e.target.value});
@@ -44,7 +46,9 @@ class App extends React.Component {
                   </datalist>
                   </label>
                 </fieldset>
+            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData} />
             <WeatherList weekInfo={this.state.weather} city={this.state.location}/>
+
       </div> //end of main div GetWeather
     );
   }
@@ -58,7 +62,7 @@ class WeatherList extends React.Component {
   render () {
     return (
       <ul>
-        <li>In {this.props.city}</li>
+        <li>Hi</li>
       </ul>
     );
   }
