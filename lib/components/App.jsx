@@ -25,7 +25,11 @@ class App extends React.Component {
         that.setState({weather:data});
       });
     }
-  }
+    else if (this.state.location === "Castle Rock") {
+      alert('hi');
+    }
+
+  } //end of getWeatherData
 
   handleInputChange(e) { //when they enter data into location field
     this.setState({location: e.target.value});
