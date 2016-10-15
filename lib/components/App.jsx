@@ -14,16 +14,25 @@ class App extends React.Component {
   //componentDidMount restoring JSON
 
   showWeatherData() { //when they click on submit
-    this.setState({weather: "cloudy"});
-  }
-
-  getAPIData() {
+    let that = this;
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
-        return data;
-      });
+      addWeatherToApp(data);
+    });
+    function addWeatherToApp(data) {
+      that.setState({weather: data});
+    }
   }
 
-  handleInputChange(e) {
+  // showWeatherData() {
+ //     let that = this;
+ //     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
+ //       addWeatherToApp(data);
+ //     });
+ //     function addWeatherToApp(data) {
+ //       that.setState({weather: data});
+ //     }
+
+  handleInputChange(e) { //when they enter data into location field
     this.setState({location: e.target.value});
   }
 
