@@ -13,8 +13,8 @@ class App extends React.Component {
 
   //componentDidMount restoring JSON
 
-  handleInputChange() {
-    alert('hi');
+  handleInputChange(e) {
+    this.setState({location: e.target.value});
   }
 
   render () {
@@ -44,10 +44,25 @@ class App extends React.Component {
                   </datalist>
                   </label>
                 </fieldset>
+            <WeatherList weekInfo={this.state.weather} city={this.state.location}/>
       </div> //end of main div GetWeather
     );
   }
 } //end of App
+
+class WeatherList extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render () {
+    return (
+      <ul>
+        <li>In {this.props.city}</li>
+      </ul>
+    );
+  }
+} //end of WeatherList
 
 ReactDOM.render(<App title='Weathrly' />, document.querySelector('#application'));
 // ReactDOM.render(<ReactBox title='React to This'/>, document.querySelector('.application'));
