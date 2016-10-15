@@ -84,7 +84,7 @@
 
 
 	// module
-	exports.push([module.id, "/* colors */\n/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbody {\n  background-color: #CCC; }\n\nheader {\n  text-align: center; }\n  header h1, header h3, header p, header button, header label, header input, header option, header #search-input {\n    font-family: \"Roboto\", serif; }\n  header h1 {\n    font-size: 40px;\n    text-align: center; }\n  header h3 {\n    font-size: 20px;\n    font-style: italic;\n    text-align: center; }\n  header nav {\n    margin-top: 50px;\n    margin-bottom: 50px;\n    margin-left: auto;\n    margin-right: auto; }\n  header .nav-bar-item {\n    display: inline-block;\n    list-style-type: none;\n    margin-left: 20px;\n    margin-right: 20px; }\n\nfieldset {\n  border: none; }\n  fieldset .fieldset-left-item {\n    margin-right: 120px; }\n  fieldset .fieldset-right-item {\n    margin-left: 120px; }\n", ""]);
+	exports.push([module.id, "/* colors */\n/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbody {\n  background-color: #CCC; }\n\nh1, h3, p, button, label, input, option, li {\n  font-family: \"Roboto\", serif; }\n\ninput {\n  text-align: center; }\n\nfieldset {\n  text-align: center;\n  padding: 10px;\n  letter-spacing: 2px; }\n\nheader {\n  background-color: #3F51B5; }\n\nh1 {\n  font-size: 40px;\n  text-align: center;\n  color: #FFF;\n  font-weight: 700;\n  font-size: 40px;\n  letter-spacing: 5px;\n  margin: 20px; }\n\nh3 {\n  font-size: 20px;\n  font-style: italic;\n  color: #212121;\n  font-size: 24px;\n  font-weight: 400;\n  text-align: center; }\n\nnav {\n  margin-top: 50px;\n  margin-bottom: 50px;\n  text-align: center;\n  padding: 10px; }\n\nli {\n  padding: 25px;\n  display: inline; }\n\n.nav-bar-item {\n  display: inline-block;\n  list-style-type: none;\n  margin-left: 20px;\n  margin-right: 20px; }\n\nbutton {\n  background-color: #3F51B5;\n  border: solid 2px;\n  border-radius: 8px;\n  color: #212121;\n  font-weight: 400;\n  font-size: 14px;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  width: 150px;\n  height: 36px;\n  margin-left: 40%; }\n  button:hover {\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);\n    cursor: pointer; }\n\nfieldset {\n  border: none; }\n  fieldset .fieldset-left-item {\n    margin-right: 120px; }\n  fieldset .fieldset-right-item {\n    margin-left: 120px; }\n", ""]);
 
 	// exports
 
@@ -412,30 +412,159 @@
 
 	var React = __webpack_require__(6);
 	var ReactDOM = __webpack_require__(39);
-	var GetWeather = __webpack_require__(177);
+	var WeatherButton = __webpack_require__(177);
 
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 
-	  function App() {
+	  function App(props) {
 	    _classCallCheck(this, App);
 
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+	    _this.state = {
+	      weather: [],
+	      location: "Denver"
+	    };
+	    return _this;
 	  }
 
+	  //componentDidMount restoring JSON
+
 	  _createClass(App, [{
+	    key: 'getWeatherData',
+	    value: function getWeatherData() {
+	      var that = this;
+	      $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
+	        that.setState({ weather: data });
+	      });
+	    }
+	  }, {
+	    key: 'handleInputChange',
+	    value: function handleInputChange(e) {
+	      //when they enter data into location field
+	      this.setState({ location: e.target.value });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return React.createElement(GetWeather, { text: 'Click to see your weather.', location: '' });
+	      var _this2 = this;
+
+	      return React.createElement(
+	        'div',
+	        { className: 'GetWeather' },
+	        React.createElement(
+	          'header',
+	          null,
+	          React.createElement(
+	            'h1',
+	            null,
+	            'Welcome to -Weathrly-'
+	          ),
+	          React.createElement(
+	            'h3',
+	            null,
+	            'Your World, Your Weather.'
+	          ),
+	          React.createElement(
+	            'nav',
+	            null,
+	            React.createElement(
+	              'ul',
+	              null,
+	              React.createElement(
+	                'li',
+	                { className: 'nav-bar-item' },
+	                'Cities'
+	              ),
+	              React.createElement(
+	                'li',
+	                { className: 'nav-bar-item' },
+	                'Current Warnings'
+	              ),
+	              React.createElement(
+	                'li',
+	                { className: 'nav-bar-item' },
+	                'Driving Conditions'
+	              ),
+	              React.createElement(
+	                'li',
+	                { className: 'nav-bar-item' },
+	                'Cool Links'
+	              )
+	            )
+	          )
+	        ),
+	        React.createElement(
+	          'fieldset',
+	          null,
+	          React.createElement(
+	            'label',
+	            { htmlFor: 'current-location-input', className: 'fieldset-left-item' },
+	            'Your Current Location:',
+	            React.createElement('input', { id: 'current-location-input', type: 'text', placeholder: 'City', list: 'current-loc-list', onChange: this.handleInputChange.bind(this), value: this.state.location }),
+	            React.createElement(
+	              'datalist',
+	              { id: 'current-loc-list' },
+	              React.createElement('option', { value: 'San Diego' }),
+	              React.createElement('option', { value: 'Denver' }),
+	              React.createElement('option', { value: 'San Francisco' }),
+	              React.createElement('option', { value: 'Castle Rock' })
+	            )
+	          )
+	        ),
+	        React.createElement(WeatherButton, { id: 'get-weather-button', text: 'Get Weather', handleClick: function handleClick() {
+	            return _this2.getWeatherData();
+	          } }),
+	        React.createElement(WeatherList, { data: this.state.weather, city: this.state.location })
+	      ) //end of GetWeather
+	      ;
 	    }
 	  }]);
 
 	  return App;
 	}(React.Component); //end of App
 
-	ReactDOM.render(React.createElement(App, null), document.getElementById('application'));
+	var WeatherList = function (_React$Component2) {
+	  _inherits(WeatherList, _React$Component2);
 
-	module.exports = App;
+	  function WeatherList(props) {
+	    _classCallCheck(this, WeatherList);
+
+	    return _possibleConstructorReturn(this, (WeatherList.__proto__ || Object.getPrototypeOf(WeatherList)).call(this, props));
+	  }
+
+	  // showWeatherData(data) {
+	  //   return(<div>{data.date}</div>);
+	  // }
+
+	  _createClass(WeatherList, [{
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
+	        'ul',
+	        null,
+	        '// ',
+	        React.createElement(
+	          'li',
+	          null,
+	          this.props.data.map(this.showWeatherData)
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          this.props.data.filter(function (data) {
+	            return data.location === "Denver";
+	          })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return WeatherList;
+	}(React.Component); //end of WeatherList
+
+	ReactDOM.render(React.createElement(App, { title: 'Weathrly' }), document.querySelector('#application'));
 
 /***/ },
 /* 6 */
@@ -21841,170 +21970,6 @@
 
 /***/ },
 /* 177 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var React = __webpack_require__(6);
-	var ReactDOM = __webpack_require__(39);
-	var WeatherButton = __webpack_require__(178);
-
-	var GetWeather = function (_React$Component) {
-	  _inherits(GetWeather, _React$Component);
-
-	  function GetWeather(props) {
-	    _classCallCheck(this, GetWeather);
-
-	    var _this = _possibleConstructorReturn(this, (GetWeather.__proto__ || Object.getPrototypeOf(GetWeather)).call(this, props));
-
-	    _this.state = {
-	      text: props.text,
-	      location: props.location };
-	    return _this;
-	  }
-
-	  _createClass(GetWeather, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var mostRecentLocation = JSON.parse(localStorage.getItem("location"));
-	      this.setState({ location: mostRecentLocation ? mostRecentLocation : "Denver" });
-	    }
-	  }, {
-	    key: 'showWeatherData',
-	    value: function showWeatherData() {
-	      var city = this.state.location;
-	      var min = void 0;
-	      var max = void 0;
-
-	      this.setLocalStorage(this.state.location);
-
-	      if (city === "Denver") {
-	        min = 0;
-	        max = 8;
-	      } else if (city === "San Diego") {
-	        min = 8;
-	        max = 17;
-	      } else if (city === "San Francisco") {
-	        min = 17;
-	        max = 26;
-	      } else if (city === "Castle Rock") {
-	        min = 26;
-	        max = 35;
-	      }
-
-	      var that = this;
-
-	      $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
-	        var text = "";
-	        for (var i = min; i < max; i++) {
-	          text = text + "In " + data[i].location + "," + " the weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type;
-	        }
-	        that.setState({ text: text });
-	      }); //end of get function
-	    } //end of showWeatherData
-
-	  }, {
-	    key: 'handleInputChange',
-	    value: function handleInputChange(e) {
-	      this.setState({ location: e.target.value });
-	    } //end of handleInputChange
-
-	  }, {
-	    key: 'setLocalStorage',
-	    value: function setLocalStorage() {
-	      localStorage.setItem("location", JSON.stringify(this.state.location));
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return React.createElement(
-	        'div',
-	        { className: 'GetWeather' },
-	        React.createElement(
-	          'header',
-	          null,
-	          React.createElement(
-	            'h1',
-	            null,
-	            'Welcome to Weathrly!'
-	          ),
-	          React.createElement(
-	            'h3',
-	            null,
-	            'Weathrly: Your World, Your Weather.'
-	          ),
-	          React.createElement(
-	            'nav',
-	            null,
-	            React.createElement(
-	              'ul',
-	              null,
-	              React.createElement(
-	                'li',
-	                { 'class': 'nav-bar-item' },
-	                'Cities'
-	              ),
-	              React.createElement(
-	                'li',
-	                { 'class': 'nav-bar-item' },
-	                'Current Warnings'
-	              ),
-	              React.createElement(
-	                'li',
-	                { 'class': 'nav-bar-item' },
-	                'Driving Conditions'
-	              ),
-	              React.createElement(
-	                'li',
-	                { 'class': 'nav-bar-item' },
-	                'Cool Links'
-	              )
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          'fieldset',
-	          null,
-	          React.createElement(
-	            'label',
-	            { 'for': 'current-location-input', 'class': 'fieldset-left-item' },
-	            'Your Current Location:',
-	            React.createElement('input', { id: 'current-location-input', type: 'text', placeholder: 'City', list: 'current-loc-list', onChange: this.handleInputChange.bind(this), value: this.state.location }),
-	            React.createElement(
-	              'datalist',
-	              { id: 'current-loc-list' },
-	              React.createElement('option', { value: 'San Diego' }),
-	              React.createElement('option', { value: 'Denver' }),
-	              React.createElement('option', { value: 'San Francisco' }),
-	              React.createElement('option', { value: 'Castle Rock' })
-	            )
-	          )
-	        ),
-	        React.createElement(WeatherButton, { id: 'get-weather-button', text: 'Get Weather', handleClick: this.showWeatherData.bind(this) }),
-	        React.createElement(
-	          'div',
-	          null,
-	          this.state.text
-	        )
-	      );
-	    }
-	  }]);
-
-	  return GetWeather;
-	}(React.Component); //end of GetWeather
-
-	module.exports = GetWeather;
-
-/***/ },
-/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
