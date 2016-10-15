@@ -15,7 +15,7 @@ class WeatherList extends React.Component {
     return (
       <div>
         <ul>
-          <li>{this.props.city}</li>
+          <li>In {this.props.city}, the weather will be {}</li>
         </ul>
       </div>
     );
