@@ -55,14 +55,6 @@ class App extends React.Component {
         <header>
           <h1>Welcome to -Weathrly-</h1>
           <h3>Your World<br></br>Your Weather</h3>
-          <nav>
-            <ul>
-              <li className="nav-bar-item">Cities</li>
-              <li className="nav-bar-item">Current Warnings</li>
-              <li className="nav-bar-item">Driving Conditions</li>
-              <li className="nav-bar-item">Cool Links</li>
-            </ul>
-          </nav>
         </header>
         <fieldset>
                   <label htmlFor="current-location-input" className="fieldset-left-item">Your Current Location:
