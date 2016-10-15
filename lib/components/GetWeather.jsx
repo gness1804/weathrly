@@ -5,8 +5,14 @@ const WeatherButton = require('./WeatherButton.jsx');
 class GetWeather extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {weather: []};
+    this.state = {
+      weather: [],
+      location: "Denver"};
   }
+
+  handleInputChange(e){
+      this.setState({location: e.target.value});
+    } //end of handleInputChange
 
   render () {
     return (
@@ -23,10 +29,22 @@ class GetWeather extends React.Component {
                   </ul>
                 </nav>
               </header>
-        </div>
+              <fieldset>
+                        <label htmlFor="current-location-input" className="fieldset-left-item">Your Current Location:
+                        <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)} value={this.state.location}>
+                        </input>
+                        <datalist id="current-loc-list">
+                          <option value="San Diego"></option>
+                          <option value="Denver"></option>
+                          <option value="San Francisco"></option>
+                          <option value="Castle Rock"></option>
+                        </datalist>
+                        </label>
+                      </fieldset>
+        </div> //end of GetWeather div
     );
   }
-} //end of GetWeather
+} //end of GetWeather function
 
 module.exports = GetWeather;
 
