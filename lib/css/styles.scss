@@ -61,11 +61,30 @@ header {
 
   .weather-card {
     height: 100px;
-    width: 500px;
+    width: 600px;
+    border: 5px solid white;
+    border-radius: 15%;
+    background: linear-gradient(to bottom,
+    rgba(207,222,247,1) 0%,
+    rgba(115,159,231,1) 24%,
+    rgba(10,88,214,1) 50%,
+    rgba(83,137,225,1) 79%,
+    rgba(136,174,234,1) 100%);
+    margin-left: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
   }
 
-  .weather-card-text  {
+  .weather-card-text1  {
+    margin-top: 20px;
     text-align: center;
+  }
+
+  .weather-card-text2  {
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
   }
 
   .nav-bar-item{
