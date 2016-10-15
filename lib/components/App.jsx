@@ -26,7 +26,9 @@ class App extends React.Component {
       });
     }
     else if (this.state.location === "Castle Rock") {
-      alert('hi');
+      $.get("http://weatherly-api.herokuapp.com/api/weather/castle-rock", function (data) {
+        that.setState({weather:data});
+      });
     }
 
   } //end of getWeatherData
