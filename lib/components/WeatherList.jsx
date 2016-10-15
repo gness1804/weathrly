@@ -8,14 +8,14 @@ class WeatherList extends React.Component {
   constructor(props) {
     super(props);
     let info = this.props.weekInfo;
-    console.log(this.props.city);
+    let city = this.props.city;
   }
 
   render () {
     return (
       <div>
         <ul>
-          <li>{}</li>
+          <li>{this.props.city}</li>
         </ul>
       </div>
     );
