@@ -13,14 +13,19 @@ class GetWeather extends React.Component {
 
   handleInputChange(e){
       this.setState({location: e.target.value});
-      // console.log(this.state.weather);
+      console.log(this.state.location);
     } //end of handleInputChange
 
   showWeatherData(){ //when they click on submit
-    $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
-      console.log(data[0]);
-    });
+    this.setState({weather: this.getAPIData()});
+    // console.log(this.state.weather);
   } //end of showWeatherData
+
+  getAPIData() {
+    $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
+      return data;
+    });
+  }
 
   addWeatherDataToPage(data, that) {
     that.setState({weather: data});
@@ -53,7 +58,7 @@ class GetWeather extends React.Component {
                         </datalist>
                         </label>
                       </fieldset>
-                      <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this)} />
+                      <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData} />
                       <WeatherList weekInfo={this.state.weather} city={this.state.location}/>
         </div> //end of GetWeather div
     );

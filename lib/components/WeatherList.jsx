@@ -7,8 +7,7 @@ const WeatherButton = require('./WeatherButton.jsx');
 class WeatherList extends React.Component {
   constructor(props) {
     super(props);
-    let info = this.props.weekInfo || "Dogs";
-    let city = this.props.city || "Denver";
+    
   }
 
   render () {
