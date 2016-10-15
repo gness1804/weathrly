@@ -15,9 +15,11 @@ class App extends React.Component {
 
   getWeatherData() {
     let that = this;
-    $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
-      that.setState({weather:data});
-    });
+    if (this.state.location === "Denver") {
+      $.get("http://weatherly-api.herokuapp.com/api/weather/denver", function (data) {
+        that.setState({weather:data});
+      });
+    }
   }
 
   handleInputChange(e) { //when they enter data into location field
@@ -62,18 +64,18 @@ class App extends React.Component {
 class WeatherList extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   showWeatherData(data) {
-    return(<div>{data.date}</div>);
+    return(<div>
+      On {data.date},
+    </div>);
   }
 
   render () {
     return (
       <ul>
         <li>{this.props.data.map(this.showWeatherData)}</li>
-        <li>{this.props.city}</li>
       </ul>
     );
   }
