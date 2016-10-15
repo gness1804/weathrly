@@ -11,7 +11,10 @@ class App extends React.Component {
     };
   }
 
-  //componentDidMount restoring JSON
+  componentDidMount(){
+    const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
+    this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"})
+  } //end of componentDidMount
 
   getWeatherData() { //when they click on Get Weather button
     let that = this;
