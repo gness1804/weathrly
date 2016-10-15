@@ -59,6 +59,15 @@ header {
     display: inline;
   }
 
+  .weather-card {
+    height: 100px;
+    width: 500px;
+  }
+
+  .weather-card-text  {
+    text-align: center;
+  }
+
   .nav-bar-item{
     display: inline-block;
     list-style-type: none;
@@ -68,7 +77,7 @@ header {
 
   .weather-text{
     text-align: center;
-    margin-top: 5px;
+    // margin-top: 5px;
   }
 
 
