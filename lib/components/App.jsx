@@ -128,8 +128,8 @@ class WeatherList extends React.Component {
   render () {
     return (
       <ul>
-        <li>{this.props.data.map(this.showWeatherData)}</li>
         <li>{this.props.data.map(this.showExtremeWeather)}</li>
+        <li>{this.props.data.map(this.showWeatherData)}</li>
       </ul>
     );
   }
