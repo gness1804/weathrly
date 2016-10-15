@@ -101,7 +101,9 @@ class WeatherList extends React.Component {
 
   showExtremeWeather(data) {
     if (data.weatherType.scale === 3) {
-      console.log("hi");
+      return(<div>
+        On {data.date}, there will be 
+      </div>);
     }
   }
 
