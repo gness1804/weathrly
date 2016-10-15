@@ -13,16 +13,6 @@ class App extends React.Component {
 
   //componentDidMount restoring JSON
 
-  // showWeatherData() { //when they click on submit
-  //   let that = this;
-  //   $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
-  //     addWeatherToApp(data);
-  //   });
-  //   function addWeatherToApp(data) {
-  //     that.setState({weather: data});
-  //   }
-  // } //end of showWeatherData
-
   getWeatherData() {
     let that = this;
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
@@ -62,7 +52,7 @@ class App extends React.Component {
                   </label>
                 </fieldset>
             <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={()=>this.getWeatherData()} />
-            <WeatherList data={this.state.weather}/>
+            <WeatherList data={this.state.weather} city={this.state.location}/>
 
       </div> //end of GetWeather
     );
@@ -72,7 +62,7 @@ class App extends React.Component {
 class WeatherList extends React.Component {
   constructor(props) {
     super(props);
-    // let data = this.props.data;
+
   }
 
   showWeatherData(data) {
@@ -83,6 +73,7 @@ class WeatherList extends React.Component {
     return (
       <ul>
         <li>{this.props.data.map(this.showWeatherData)}</li>
+        <li>{this.props.city}</li>
       </ul>
     );
   }
