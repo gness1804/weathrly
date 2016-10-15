@@ -13,8 +13,14 @@ class App extends React.Component {
 
   //componentDidMount restoring JSON
 
-  showWeatherData() {
-    alert('hi');
+  showWeatherData() { //when they click on submit
+    this.setState({weather: "cloudy"});
+  }
+
+  getAPIData() {
+    $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
+        return data;
+      });
   }
 
   handleInputChange(e) {
@@ -48,7 +54,7 @@ class App extends React.Component {
                   </datalist>
                   </label>
                 </fieldset>
-            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData} />
+            <WeatherButton id = 'get-weather-button' text="Get Weather" handleClick={this.showWeatherData.bind(this)} />
             <WeatherList weekInfo={this.state.weather} city={this.state.location}/>
 
       </div> //end of main div GetWeather
@@ -64,7 +70,7 @@ class WeatherList extends React.Component {
   render () {
     return (
       <ul>
-        <li>Hi</li>
+        <li>The weather will be {this.props.weekInfo}</li>
       </ul>
     );
   }
