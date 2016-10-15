@@ -429,16 +429,41 @@
 	    return _this;
 	  }
 
-	  //componentDidMount restoring JSON
-
 	  _createClass(App, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var mostRecentLocation = JSON.parse(localStorage.getItem("location"));
+	      this.setState({ location: mostRecentLocation ? mostRecentLocation : "Denver" });
+	    } //end of componentDidMount
+
+	  }, {
 	    key: 'getWeatherData',
 	    value: function getWeatherData() {
+	      //when they click on Get Weather button
 	      var that = this;
-	      $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
-	        that.setState({ weather: data });
-	      });
-	    }
+	      var city = this.state.location.toUpperCase();
+	      if (city === "DENVER") {
+	        $.get("http://weatherly-api.herokuapp.com/api/weather/denver", function (data) {
+	          that.setState({ weather: data });
+	        });
+	      } else if (city === "SAN DIEGO") {
+	        $.get("http://weatherly-api.herokuapp.com/api/weather/san-diego", function (data) {
+	          that.setState({ weather: data });
+	        });
+	      } else if (city === "CASTLE ROCK") {
+	        $.get("http://weatherly-api.herokuapp.com/api/weather/castle-rock", function (data) {
+	          that.setState({ weather: data });
+	        });
+	      } else if (city === "SAN FRANCISCO") {
+	        $.get("http://weatherly-api.herokuapp.com/api/weather/san-fransico", function (data) {
+	          that.setState({ weather: data });
+	        });
+	      } else {
+	        alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
+	      }
+	      localStorage.setItem("location", JSON.stringify(this.state.location));
+	    } //end of getWeatherData
+
 	  }, {
 	    key: 'handleInputChange',
 	    value: function handleInputChange(e) {
@@ -534,28 +559,84 @@
 	    return _possibleConstructorReturn(this, (WeatherList.__proto__ || Object.getPrototypeOf(WeatherList)).call(this, props));
 	  }
 
-	  // showWeatherData(data) {
-	  //   return(<div>{data.date}</div>);
-	  // }
-
 	  _createClass(WeatherList, [{
+	    key: 'showWeatherData',
+	    value: function showWeatherData(data) {
+
+	      return React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	          'p',
+	          null,
+	          'On ',
+	          data.date,
+	          ', the weather will be ',
+	          data.weatherType.type,
+	          ' with a high of ',
+	          data.temp.high,
+	          ' and a low of ',
+	          data.temp.low,
+	          '. There will be a ',
+	          Math.floor(data.weatherType.chance * 100),
+	          ' percent chance of this weather event happening.'
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'showExtremeWeather',
+	    value: function showExtremeWeather(data) {
+	      if (data.weatherType.scale === 3) {
+	        if (data.weatherType.type === "sunny") {
+	          return React.createElement(
+	            'div',
+	            null,
+	            'On ',
+	            data.date,
+	            ', there will be extreme sun. Take care and use plenty of sunscreen!'
+	          );
+	        } else if (data.weatherType.type === "rain") {
+	          return React.createElement(
+	            'div',
+	            null,
+	            'On ',
+	            data.date,
+	            ', there will be a high chance of flooding and extreme rain. Stay inside and don\'t drive if possible!'
+	          );
+	        } else if (data.weatherType.type === "windy") {
+	          return React.createElement(
+	            'div',
+	            null,
+	            'On ',
+	            data.date,
+	            ', there will be very high winds. Stay indoors!'
+	          );
+	        } else if (data.weatherType.type === "snow") {
+	          return React.createElement(
+	            'div',
+	            null,
+	            'On ',
+	            data.date,
+	            ', is a blizzard forecasted! Take precautions!'
+	          );
+	        }
+	      }
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return React.createElement(
 	        'ul',
 	        null,
-	        '// ',
 	        React.createElement(
 	          'li',
 	          null,
-	          this.props.data.map(this.showWeatherData)
+	          this.props.data.map(this.showExtremeWeather)
 	        ),
 	        React.createElement(
 	          'li',
 	          null,
-	          this.props.data.filter(function (data) {
-	            return data.location === "Denver";
-	          })
+	          this.props.data.map(this.showWeatherData)
 	        )
 	      );
 	    }
