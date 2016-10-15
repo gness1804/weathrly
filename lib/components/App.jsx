@@ -11,6 +11,12 @@ class App extends React.Component {
     };
   }
 
+  //componentDidMount restoring JSON
+
+  handleInputChange() {
+    alert('hi');
+  }
+
   render () {
     return (
       <div className="GetWeather">
@@ -26,6 +32,18 @@ class App extends React.Component {
             </ul>
           </nav>
         </header>
+        <fieldset>
+                  <label htmlFor="current-location-input" className="fieldset-left-item">Your Current Location:
+                  <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)} value={this.state.location}>
+                  </input>
+                  <datalist id="current-loc-list">
+                    <option value="San Diego"></option>
+                    <option value="Denver"></option>
+                    <option value="San Francisco"></option>
+                    <option value="Castle Rock"></option>
+                  </datalist>
+                  </label>
+                </fieldset>
       </div> //end of main div GetWeather
     );
   }
