@@ -92,14 +92,22 @@ class WeatherList extends React.Component {
   showWeatherData(data) {
 
     return(<div>
-      On {data.date}, the weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}. There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
-    </div>);
+      <p>
+        On {data.date}, the weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}. There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+      </p>
+    </div>
+    );
+  }
+
+  showExtremeWeather(data) {
+    
   }
 
   render () {
     return (
       <ul>
         <li>{this.props.data.map(this.showWeatherData)}</li>
+        <li>{this.props.data.map(this.showExtremeWeather)}</li>
       </ul>
     );
   }
