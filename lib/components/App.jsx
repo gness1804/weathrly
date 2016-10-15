@@ -90,8 +90,9 @@ class WeatherList extends React.Component {
   }
 
   showWeatherData(data) {
+
     return(<div>
-      On {data.date}, the weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.
+      On {data.date}, the weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}. There will be a {data.weatherType.chance * 100} percent chance of this weather event happening.
     </div>);
   }
 
