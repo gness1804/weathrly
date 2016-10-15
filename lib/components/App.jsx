@@ -15,20 +15,25 @@ class App extends React.Component {
 
   getWeatherData() {
     let that = this;
-    if (this.state.location === "Denver") {
+    let city = this.state.location.toUpperCase();
+    console.log(city);
+    if (city === "DENVER") {
       $.get("http://weatherly-api.herokuapp.com/api/weather/denver", function (data) {
         that.setState({weather:data});
       });
     }
-    else if (this.state.location === "San Diego") {
+    else if (city === "San Diego") {
       $.get("http://weatherly-api.herokuapp.com/api/weather/san-diego", function (data) {
         that.setState({weather:data});
       });
     }
-    else if (this.state.location === "Castle Rock") {
+    else if (city === "Castle Rock") {
       $.get("http://weatherly-api.herokuapp.com/api/weather/castle-rock", function (data) {
         that.setState({weather:data});
       });
+    }
+    else if (city === "San Francisco") {
+
     }
 
   } //end of getWeatherData
