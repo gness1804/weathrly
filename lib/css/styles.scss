@@ -22,7 +22,7 @@ fieldset {
 }
 
 header {
-  // background-image: url('../../images/banner.jpg');
+  background-image: url('../../images/banner.jpg');
   height: 50%;
 }
 
@@ -73,7 +73,7 @@ header {
 
 
 button {
-  background-color: $indigo;
+  background-color: $dark-blue;
   border: solid 2px;
   border-radius: 8px;
   color: $dark-grey;

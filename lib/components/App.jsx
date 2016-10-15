@@ -54,7 +54,7 @@ class App extends React.Component {
       <div className="GetWeather">
         <header>
           <h1>Welcome to -Weathrly-</h1>
-          <h3>Your World, Your Weather.</h3>
+          <h3>Your World<br></br>Your Weather</h3>
           <nav>
             <ul>
               <li className="nav-bar-item">Cities</li>
