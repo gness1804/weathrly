@@ -13,15 +13,13 @@ class GetWeather extends React.Component {
 
   handleInputChange(e){
       this.setState({location: e.target.value});
-      console.log(this.state.weather);
+      // console.log(this.state.weather);
     } //end of handleInputChange
 
   showWeatherData(){ //when they click on submit
-    let that = this;
     $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
-      that.addWeatherDataToPage(data, that);
+      console.log(data[0]);
     });
-    // console.log(this.state.weather);
   } //end of showWeatherData
 
   addWeatherDataToPage(data, that) {
