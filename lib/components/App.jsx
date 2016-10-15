@@ -101,9 +101,27 @@ class WeatherList extends React.Component {
 
   showExtremeWeather(data) {
     if (data.weatherType.scale === 3) {
-      return(<div>
-        On {data.date}, there will be 
-      </div>);
+      if (data.weatherType.type === "sunny") {
+        return(<div>
+          On {data.date}, there will be extreme sun. Take care and use plenty of sunscreen!
+        </div>);
+      }
+      else if (data.weatherType.type === "rain") {
+        return(<div>
+          On {data.date}, there will be a high chance of flooding and extreme rain. Stay inside and don't drive if possible!
+        </div>);
+      }
+      else if (data.weatherType.type === "windy") {
+        return(<div>
+          On {data.date}, there will be very high winds. Stay indoors!
+        </div>);
+      }
+      else if (data.weatherType.type === "snow") {
+        return(<div>
+          On {data.date}, is a blizzard forecasted! Take precautions!
+        </div>);
+      }
+
     }
   }
 
