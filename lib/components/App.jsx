@@ -20,6 +20,11 @@ class App extends React.Component {
         that.setState({weather:data});
       });
     }
+    else if (this.state.location === "San Diego") {
+      $.get("http://weatherly-api.herokuapp.com/api/weather/san-diego", function (data) {
+        that.setState({weather:data});
+      });
+    }
   }
 
   handleInputChange(e) { //when they enter data into location field
@@ -68,7 +73,7 @@ class WeatherList extends React.Component {
 
   showWeatherData(data) {
     return(<div>
-      On {data.date},
+      On {data.date}, the weather in {data.location}
     </div>);
   }
 
