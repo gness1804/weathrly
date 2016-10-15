@@ -84,7 +84,7 @@
 
 
 	// module
-	exports.push([module.id, "/* colors */\n/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbody {\n  background-color: #CCC; }\n\nheader {\n  text-align: center; }\n  header h1, header h3, header p, header button, header label, header input, header option, header #search-input {\n    font-family: \"Roboto\", serif; }\n  header h1 {\n    font-size: 40px;\n    text-align: center; }\n  header h3 {\n    font-size: 20px;\n    font-style: italic;\n    text-align: center; }\n  header nav {\n    margin-top: 50px;\n    margin-bottom: 50px;\n    margin-left: auto;\n    margin-right: auto; }\n  header .nav-bar-item {\n    display: inline-block;\n    list-style-type: none;\n    margin-left: 20px;\n    margin-right: 20px; }\n\nfieldset {\n  border: none; }\n  fieldset .fieldset-left-item {\n    margin-right: 120px; }\n  fieldset .fieldset-right-item {\n    margin-left: 120px; }\n", ""]);
+	exports.push([module.id, "/* colors */\n/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbody {\n  background-color: #CCC; }\n\nh1, h3, p, button, label, input, option, li {\n  font-family: \"Roboto\", serif; }\n\ninput {\n  text-align: center; }\n\nfieldset {\n  text-align: center;\n  padding: 10px;\n  letter-spacing: 2px; }\n\nheader {\n  background-color: #3F51B5; }\n\nh1 {\n  font-size: 40px;\n  text-align: center;\n  color: #FFF;\n  font-weight: 700;\n  font-size: 40px;\n  letter-spacing: 5px;\n  margin: 20px; }\n\nh3 {\n  font-size: 20px;\n  font-style: italic;\n  color: #212121;\n  font-size: 24px;\n  font-weight: 400;\n  text-align: center; }\n\nnav {\n  margin-top: 50px;\n  margin-bottom: 50px;\n  text-align: center;\n  padding: 10px; }\n\nli {\n  padding: 25px;\n  display: inline; }\n\n.nav-bar-item {\n  display: inline-block;\n  list-style-type: none;\n  margin-left: 20px;\n  margin-right: 20px; }\n\nbutton {\n  background-color: #3F51B5;\n  border: solid 2px;\n  border-radius: 8px;\n  color: #212121;\n  font-weight: 400;\n  font-size: 14px;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  width: 150px;\n  height: 36px;\n  margin-left: 40%; }\n  button:hover {\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);\n    cursor: pointer; }\n\nfieldset {\n  border: none; }\n  fieldset .fieldset-left-item {\n    margin-right: 120px; }\n  fieldset .fieldset-right-item {\n    margin-left: 120px; }\n", ""]);
 
 	// exports
 
@@ -426,7 +426,7 @@
 	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
-	      return React.createElement(GetWeather, { text: 'Click to see your weather.', location: '' });
+	      return React.createElement(GetWeather, { text: 'Click to see your weather.', location: '', extremeWeather: '' });
 	    }
 	  }]);
 
@@ -21867,7 +21867,8 @@
 
 	    _this.state = {
 	      text: props.text,
-	      location: props.location };
+	      location: props.location,
+	      extremeWeather: props.extremeWeather };
 	    return _this;
 	  }
 
@@ -21880,34 +21881,50 @@
 	  }, {
 	    key: 'showWeatherData',
 	    value: function showWeatherData() {
-	      var city = this.state.location;
+	      var city = this.state.location.toUpperCase();
 	      var min = void 0;
 	      var max = void 0;
 
 	      this.setLocalStorage(this.state.location);
 
-	      if (city === "Denver") {
+	      if (city === "DENVER") {
 	        min = 0;
 	        max = 8;
-	      } else if (city === "San Diego") {
+	      } else if (city === "SAN DIEGO") {
 	        min = 8;
 	        max = 17;
-	      } else if (city === "San Francisco") {
+	      } else if (city === "SAN FRANCISCO") {
 	        min = 17;
 	        max = 26;
-	      } else if (city === "Castle Rock") {
+	      } else if (city === "CASTLE ROCK") {
 	        min = 26;
 	        max = 35;
+	      } else {
+	        alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
+	        //do something else; maybe send them to an external weather site with the city name entered in or pulling in a real api like that of weather underground?
 	      }
 
 	      var that = this;
 
 	      $.get("http://weatherly-api.herokuapp.com/api/weather", function (data) {
 	        var text = "";
+	        var warning = "";
 	        for (var i = min; i < max; i++) {
-	          text = text + "In " + data[i].location + "," + " the weather on" + " " + data[i].date + " will be" + " " + data[i].weatherType.type;
+	          var percentChance = data[i].weatherType.chance * 100;
+	          var extremeCondition = data[i].weatherType.type;
+	          text = text + "In " + data[i].location + "," + " the weather on" + " " + data[i].date + " will be" + " " + percentChance + " percent chance of " + data[i].weatherType.type + "." + " The high will be " + data[i].temp.high + " " + "and the low will be " + data[i].temp.low + "." + " ";
+	          if (data[i].weatherType.scale === 3) {
+	            warning = warning + "On" + data[i].date + "," + " there will be extreme " + condition(extremeCondition);
+	          } //end of if statement
+	        } //end of for loop
+
+	        function condition(extremeCondition) {
+	          return extremeCondition;
 	        }
+
 	        that.setState({ text: text });
+	        that.setState({ extremeWeather: warning });
+	        // console.log(this.state);
 	      }); //end of get function
 	    } //end of showWeatherData
 
@@ -21934,12 +21951,12 @@
 	          React.createElement(
 	            'h1',
 	            null,
-	            'Welcome to Weathrly!'
+	            'Welcome to -Weathrly-'
 	          ),
 	          React.createElement(
 	            'h3',
 	            null,
-	            'Weathrly: Your World, Your Weather.'
+	            'Your World, Your Weather.'
 	          ),
 	          React.createElement(
 	            'nav',
@@ -21949,22 +21966,22 @@
 	              null,
 	              React.createElement(
 	                'li',
-	                { 'class': 'nav-bar-item' },
+	                { className: 'nav-bar-item' },
 	                'Cities'
 	              ),
 	              React.createElement(
 	                'li',
-	                { 'class': 'nav-bar-item' },
+	                { className: 'nav-bar-item' },
 	                'Current Warnings'
 	              ),
 	              React.createElement(
 	                'li',
-	                { 'class': 'nav-bar-item' },
+	                { className: 'nav-bar-item' },
 	                'Driving Conditions'
 	              ),
 	              React.createElement(
 	                'li',
-	                { 'class': 'nav-bar-item' },
+	                { className: 'nav-bar-item' },
 	                'Cool Links'
 	              )
 	            )
@@ -21975,7 +21992,7 @@
 	          null,
 	          React.createElement(
 	            'label',
-	            { 'for': 'current-location-input', 'class': 'fieldset-left-item' },
+	            { htmlFor: 'current-location-input', className: 'fieldset-left-item' },
 	            'Your Current Location:',
 	            React.createElement('input', { id: 'current-location-input', type: 'text', placeholder: 'City', list: 'current-loc-list', onChange: this.handleInputChange.bind(this), value: this.state.location }),
 	            React.createElement(
@@ -21991,8 +22008,13 @@
 	        React.createElement(WeatherButton, { id: 'get-weather-button', text: 'Get Weather', handleClick: this.showWeatherData.bind(this) }),
 	        React.createElement(
 	          'div',
-	          null,
+	          { className: 'weather-text' },
 	          this.state.text
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'extreme-weather' },
+	          this.state.extremeWeather
 	        )
 	      );
 	    }
