@@ -1,16 +1,22 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-const GetWeather = require('./GetWeather.jsx');
+//require any other jsx files needed
 
 class App extends React.Component {
-  render() {
-    return(
-<GetWeather text="Click to see your weather." location="" extremeWeather=""/>
+  constructor(props) {
+    super(props);
+    this.state = {
+      weather: [],
+      location: "Denver"
+    };
+  }
 
-    )
+  render () {
+    return (
+      <div>Hi</div>
+    );
   }
 } //end of App
 
-ReactDOM.render(<App />, document.getElementById('application'));
-
-module.exports = App;
+ReactDOM.render(<App title='Weathrly' />, document.querySelector('#application'));
+// ReactDOM.render(<ReactBox title='React to This'/>, document.querySelector('.application'));
