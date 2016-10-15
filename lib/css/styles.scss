@@ -18,18 +18,20 @@ fieldset {
   text-align: center;
   padding: 10px;
   letter-spacing: 2px;
+  font-size: 18px;
 }
 
 header {
-  background-color: $indigo;
+  // background-image: url('../../images/banner.jpg');
+  height: 50%;
 }
 
   h1 {
     @include boilerplate-headline;
     color: $white;
     font-weight: 700;
-    font-size: 40px;
-    letter-spacing: 5px;
+    font-size: 70px;
+    letter-spacing: 2px;
     margin: 20px;
   }
 
@@ -38,8 +40,9 @@ header {
     font-style: italic;
     color: $dark-grey;
     // padding-bottom: 5px;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
+    letter-spacing: 6px;
     @include center-contained-items-horiz;
   }
 
@@ -48,6 +51,7 @@ header {
     margin-bottom: 50px;
     text-align: center;
     padding: 10px;
+    font-size: 20px
   }
 
   li {
@@ -62,6 +66,11 @@ header {
     margin-right: $standard-nav-item-left-right-margin;
   }
 
+  .weather-text{
+    text-align: center;
+    margin-top: 5px;
+  }
+
 
 button {
   background-color: $indigo;
@@ -72,8 +81,8 @@ button {
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  width: 150px;
-  height: 36px;
+  width: 300px;
+  height: 50px;
   margin-left: 40%;
 
   &:hover {
