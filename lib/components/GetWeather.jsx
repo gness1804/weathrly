@@ -12,6 +12,7 @@ class GetWeather extends React.Component {
 
   handleInputChange(e){
       this.setState({location: e.target.value});
+      console.log(this.state.location);
     } //end of handleInputChange
 
   showWeatherData(){
@@ -21,7 +22,6 @@ class GetWeather extends React.Component {
         });
         function addWeatherToApp(data) {
           that.setState({weather: data});
-          console.log(that.state.weather);
         }
   }
 
