@@ -140,6 +140,26 @@ if (data.weatherType.type === "sunny") {
     </div>
     );
   }
+  else if (data.weatherType.type === "cloudy") {
+    return(<div className="weather-card">
+
+        <p className='date'>{data.date}</p>
+        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+      </p>
+    </div>
+    );
+  }
+  else if (data.weatherType.type === "thunder storms") {
+    return(<div className="weather-card">
+
+        <p className='date'>{data.date}</p>
+        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+      </p>
+    </div>
+    );
+  }
 };
 
 
