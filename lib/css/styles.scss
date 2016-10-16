@@ -71,6 +71,15 @@ header {
     color: crimson;
     background-color: $white;
     box-shadow: 8px 8px 12px $dark-grey;
+    // position: relative;
+  }
+
+  .alert {
+    height: 60px;
+    width: 75px;
+    position: absolute;
+    margin-left: 50px;
+
   }
 
   // .rain {
