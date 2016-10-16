@@ -5,9 +5,9 @@ const WeatherButton = require('../lib/components/WeatherButton');
 require('locus');
 import {shallow, mount, render} from 'enzyme';
 
-describe('app.jsx should render GetWeather', function() {
+describe('WeatherButton.jsx should render the App', function() {
   it('should render the application', function () {
-    const wrapper = shallow(<App/>);
-    expect(wrapper.contains(<GetWeather />)).to.be.true;
+    const wrapper = shallow(<WeatherButton/>);
+    expect(wrapper.contains(<App />)).to.be.true;
   });
 });

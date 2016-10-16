@@ -64,7 +64,7 @@ header {
     height: 150px;
     width: 600px;
     border: 5px solid crimson;
-    border-radius: 15%;
+    border-radius: 2%;
     margin-left: 20%;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -84,7 +84,7 @@ header {
     height: 150px;
     width: 600px;
     border: 5px solid white;
-    border-radius: 15%;
+    border-radius: 2%;
     background: linear-gradient(to bottom,
     rgba(207,222,247,1) 0%,
     rgba(115,159,231,1) 24%,
@@ -92,9 +92,15 @@ header {
     rgba(83,137,225,1) 79%,
     rgba(136,174,234,1) 100%);
     margin-left: 20%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 8px 8px 12px $dark-grey;
 
+  }
+
+  .date {
+    text-align: center;
+    font-size: 30px;
   }
 
   .weather-card-text1  {
@@ -123,7 +129,7 @@ header {
 
 button {
   background-color: $royal-blue;
-  border: solid 2px;
+  border: solid 2px $dark-grey;
   border-radius: 8px;
   color: $light-grey;
   font-weight: 400;
@@ -134,6 +140,7 @@ button {
   height: 50px;
   margin-left: 35%;
   margin-bottom: 20px;
+  box-shadow: 4px 4px 6px $dark-grey;
 
   &:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
