@@ -60,7 +60,10 @@ class App extends React.Component {
   }
 
   enterFunctionality(e) {
-    console.log(e.keyCode);
+    let that = this;
+    if (e.keyCode === 13) {
+      that.getWeatherData();
+    }
   }
 
   render () {
@@ -72,7 +75,7 @@ class App extends React.Component {
         </header>
         <fieldset>
                   <label htmlFor="current-location-input" className="fieldset-left-item">Your Current Location:
-                  <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)} value={this.state.location} onKeyDown={this.enterFunctionality}>
+                  <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)} value={this.state.location} onKeyDown={this.enterFunctionality.bind(this)}>
                   </input>
                   <datalist id="current-loc-list">
                     <option value="San Diego"></option>
