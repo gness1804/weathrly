@@ -84,7 +84,7 @@
 
 
 	// module
-	exports.push([module.id, "/* colors */\n/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbody {\n  background-color: #CCC; }\n\nh1, h3, p, button, label, input, option, li {\n  font-family: \"Roboto\", serif; }\n\ninput {\n  text-align: center; }\n\nfieldset {\n  text-align: center;\n  padding: 10px;\n  letter-spacing: 2px;\n  font-size: 18px;\n  margin: 10px; }\n\nheader {\n  background-image: url(" + __webpack_require__(4) + ");\n  height: 350px; }\n\nh1 {\n  font-size: 40px;\n  text-align: center;\n  color: #FFF;\n  font-weight: 700;\n  font-size: 70px;\n  letter-spacing: 2px;\n  margin: 20px; }\n\nh3 {\n  font-size: 20px;\n  font-style: italic;\n  color: #CCC;\n  font-size: 30px;\n  font-weight: 400;\n  letter-spacing: 6px;\n  text-align: center; }\n\nli {\n  padding: 25px;\n  display: inline; }\n\n.warning {\n  height: 150px;\n  width: 600px;\n  border: 5px solid crimson;\n  border-radius: 2%;\n  margin-left: 20%;\n  margin-top: 10px;\n  margin-bottom: 10px;\n  color: crimson;\n  background-color: #FFF;\n  box-shadow: 8px 8px 12px #212121;\n  position: relative; }\n\n.alert {\n  height: 50px;\n  width: 75px;\n  position: absolute; }\n\n.weather-card {\n  height: 150px;\n  width: 600px;\n  border: 5px solid white;\n  border-radius: 2%;\n  background: linear-gradient(to bottom, #cfdef7 0%, #739fe7 24%, #0a58d6 50%, #5389e1 79%, #88aeea 100%);\n  margin-left: 20%;\n  margin-top: 20px;\n  margin-bottom: 20px;\n  box-shadow: 8px 8px 12px #212121; }\n\n.date {\n  text-align: center;\n  font-size: 30px;\n  margin: 6px; }\n\n.weather-card-text1 {\n  margin-top: 20px;\n  text-align: center; }\n\n.weather-card-text2 {\n  margin-top: 20px;\n  text-align: center;\n  font-style: italic; }\n\n.nav-bar-item {\n  display: inline-block;\n  list-style-type: none;\n  margin-left: 20px;\n  margin-right: 20px; }\n\n.weather-text {\n  text-align: center; }\n\nbutton {\n  background-color: #2A61B4;\n  border: solid 2px #212121;\n  border-radius: 8px;\n  color: #CCC;\n  font-weight: 400;\n  font-size: 18px;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  width: 300px;\n  height: 50px;\n  margin-left: 35%;\n  margin-bottom: 20px;\n  box-shadow: 4px 4px 6px #212121; }\n  button:hover {\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);\n    cursor: pointer; }\n\nfieldset {\n  border: none; }\n  fieldset .fieldset-left-item {\n    margin-right: 120px; }\n  fieldset .fieldset-right-item {\n    margin-left: 120px; }\n", ""]);
+	exports.push([module.id, "/* colors */\n/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbody {\n  background-color: #CCC; }\n\nh1, h3, p, button, label, input, option, li {\n  font-family: \"Roboto\", serif; }\n\ninput {\n  text-align: center; }\n\nfieldset {\n  text-align: center;\n  padding: 10px;\n  letter-spacing: 2px;\n  font-size: 18px;\n  margin: 10px; }\n\nheader {\n  background-image: url(" + __webpack_require__(4) + ");\n  height: 350px; }\n\nh1 {\n  font-size: 40px;\n  text-align: center;\n  color: #FFF;\n  font-weight: 700;\n  font-size: 70px;\n  letter-spacing: 2px;\n  margin: 20px; }\n\nh3 {\n  font-size: 20px;\n  font-style: italic;\n  color: #CCC;\n  font-size: 30px;\n  font-weight: 400;\n  letter-spacing: 6px;\n  text-align: center; }\n\nli {\n  padding: 25px;\n  display: inline; }\n\n.warning {\n  height: 150px;\n  width: 600px;\n  border: 5px solid crimson;\n  border-radius: 2%;\n  margin-left: 20%;\n  margin-top: 10px;\n  margin-bottom: 10px;\n  color: crimson;\n  background-color: #FFF;\n  box-shadow: 8px 8px 12px #212121; }\n\n.alert {\n  height: 60px;\n  width: 75px;\n  position: absolute;\n  margin-left: 50px; }\n\n.weather-card {\n  height: 150px;\n  width: 600px;\n  border: 5px solid white;\n  border-radius: 2%;\n  background: linear-gradient(to bottom, #cfdef7 0%, #739fe7 24%, #0a58d6 50%, #5389e1 79%, #88aeea 100%);\n  margin-left: 20%;\n  margin-top: 20px;\n  margin-bottom: 20px;\n  box-shadow: 8px 8px 12px #212121; }\n\n.date {\n  text-align: center;\n  font-size: 30px;\n  margin: 6px; }\n\n.weather-card-text1 {\n  margin-top: 20px;\n  text-align: center; }\n\n.weather-card-text2 {\n  margin-top: 20px;\n  text-align: center;\n  font-style: italic; }\n\n.nav-bar-item {\n  display: inline-block;\n  list-style-type: none;\n  margin-left: 20px;\n  margin-right: 20px; }\n\n.weather-text {\n  text-align: center; }\n\nbutton {\n  background-color: #2A61B4;\n  border: solid 2px #212121;\n  border-radius: 8px;\n  color: #CCC;\n  font-weight: 400;\n  font-size: 18px;\n  letter-spacing: 2px;\n  text-transform: uppercase;\n  width: 300px;\n  height: 50px;\n  margin-left: 35%;\n  margin-bottom: 20px;\n  box-shadow: 4px 4px 6px #212121; }\n  button:hover {\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);\n    cursor: pointer; }\n\nfieldset {\n  border: none; }\n  fieldset .fieldset-left-item {\n    margin-right: 120px; }\n  fieldset .fieldset-right-item {\n    margin-left: 120px; }\n", ""]);
 
 	// exports
 
@@ -559,34 +559,119 @@
 	  _createClass(WeatherList, [{
 	    key: 'showWeatherData',
 	    value: function showWeatherData(data) {
-
-	      return React.createElement(
-	        'div',
-	        { className: 'weather-card' },
-	        React.createElement(
-	          'p',
-	          { className: 'date' },
-	          data.date
-	        ),
-	        React.createElement(
-	          'p',
-	          { className: 'weather-card-text1' },
-	          ' The weather will be ',
-	          data.weatherType.type,
-	          ' with a high of ',
-	          data.temp.high,
-	          ' and a low of ',
-	          data.temp.low,
-	          '.'
-	        ),
-	        React.createElement(
-	          'p',
-	          { className: 'weather-card-text2' },
-	          'There will be a ',
-	          Math.floor(data.weatherType.chance * 100),
-	          ' percent chance of this weather event happening.'
-	        )
-	      );
+	      if (data.weatherType.type === "sunny") {
+	        return React.createElement(
+	          'div',
+	          { className: 'weather-card' },
+	          React.createElement(
+	            'p',
+	            { className: 'date' },
+	            data.date
+	          ),
+	          React.createElement(
+	            'p',
+	            { className: 'weather-card-text1' },
+	            ' The weather will be ',
+	            data.weatherType.type,
+	            ' with a high of ',
+	            data.temp.high,
+	            ' and a low of ',
+	            data.temp.low,
+	            '.'
+	          ),
+	          React.createElement(
+	            'p',
+	            { className: 'weather-card-text2' },
+	            'There will be a ',
+	            Math.floor(data.weatherType.chance * 100),
+	            ' percent chance of this weather event happening.'
+	          )
+	        );
+	      } else if (data.weatherType.type === "rain") {
+	        return React.createElement(
+	          'div',
+	          { className: 'weather-card' },
+	          React.createElement(
+	            'p',
+	            { className: 'date' },
+	            data.date
+	          ),
+	          React.createElement(
+	            'p',
+	            { className: 'weather-card-text1' },
+	            ' The weather will be ',
+	            data.weatherType.type,
+	            ' with a high of ',
+	            data.temp.high,
+	            ' and a low of ',
+	            data.temp.low,
+	            '.'
+	          ),
+	          React.createElement(
+	            'p',
+	            { className: 'weather-card-text2' },
+	            'There will be a ',
+	            Math.floor(data.weatherType.chance * 100),
+	            ' percent chance of this weather event happening.'
+	          )
+	        );
+	      } else if (data.weatherType.type === "windy") {
+	        return React.createElement(
+	          'div',
+	          { className: 'weather-card' },
+	          React.createElement(
+	            'p',
+	            { className: 'date' },
+	            data.date
+	          ),
+	          React.createElement(
+	            'p',
+	            { className: 'weather-card-text1' },
+	            ' The weather will be ',
+	            data.weatherType.type,
+	            ' with a high of ',
+	            data.temp.high,
+	            ' and a low of ',
+	            data.temp.low,
+	            '.'
+	          ),
+	          React.createElement(
+	            'p',
+	            { className: 'weather-card-text2' },
+	            'There will be a ',
+	            Math.floor(data.weatherType.chance * 100),
+	            ' percent chance of this weather event happening.'
+	          )
+	        );
+	      } else if (data.weatherType.type === "snow") {
+	        return React.createElement(
+	          'div',
+	          { className: 'weather-card' },
+	          React.createElement(
+	            'p',
+	            { className: 'date' },
+	            data.date
+	          ),
+	          React.createElement(
+	            'p',
+	            { className: 'weather-card-text1' },
+	            ' The weather will be ',
+	            data.weatherType.type,
+	            ' with a high of ',
+	            data.temp.high,
+	            ' and a low of ',
+	            data.temp.low,
+	            '.'
+	          ),
+	          React.createElement(
+	            'p',
+	            { className: 'weather-card-text2' },
+	            'There will be a ',
+	            Math.floor(data.weatherType.chance * 100),
+	            ' percent chance of this weather event happening.'
+	          )
+	        );
+	      }
 	    }
 	  }, {
 	    key: 'showExtremeWeather',
@@ -601,6 +686,7 @@
 	              { className: 'date' },
 	              data.date
 	            ),
+	            React.createElement('img', { className: 'alert', src: '../../images/alert.png' }),
 	            React.createElement(
 	              'p',
 	              { className: 'weather-card-text1' },
@@ -642,7 +728,7 @@
 	              { className: 'date' },
 	              data.date
 	            ),
-	            ' ',
+	            React.createElement('img', { className: 'alert', src: '../../images/alert.png' }),
 	            React.createElement(
 	              'p',
 	              { className: 'weather-card-text1' },
@@ -663,6 +749,7 @@
 	              { className: 'date' },
 	              data.date
 	            ),
+	            React.createElement('img', { className: 'alert', src: '../../images/alert.png' }),
 	            React.createElement(
 	              'p',
 	              { className: 'weather-card-text1' },

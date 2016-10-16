@@ -99,7 +99,7 @@ class WeatherList extends React.Component {
   }
 
   showWeatherData(data) {
-
+if (data.weatherType.type === "sunny") {
     return(<div className="weather-card">
 
         <p className='date'>{data.date}</p>
@@ -109,6 +109,38 @@ class WeatherList extends React.Component {
     </div>
     );
   }
+  else if (data.weatherType.type === "rain") {
+    return(<div className="weather-card">
+
+        <p className='date'>{data.date}</p>
+        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+      </p>
+    </div>
+    );
+  }
+  else if (data.weatherType.type === "windy") {
+    return(<div className="weather-card">
+
+        <p className='date'>{data.date}</p>
+        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+      </p>
+    </div>
+    );
+  }
+  else if (data.weatherType.type === "snow") {
+    return(<div className="weather-card">
+
+        <p className='date'>{data.date}</p>
+        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+      </p>
+    </div>
+    );
+  }
+};
+
 
   showExtremeWeather(data) {
     if (data.weatherType.scale === 3) {
