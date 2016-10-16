@@ -55,6 +55,10 @@ class App extends React.Component {
 
   } //end of getWeatherData
 
+  enterFunctionality(){
+    
+  }
+
   handleInputChange(e) { //when they enter data into location field
     this.setState({location: e.target.value});
   }
@@ -68,7 +72,7 @@ class App extends React.Component {
         </header>
         <fieldset>
                   <label htmlFor="current-location-input" className="fieldset-left-item">Your Current Location:
-                  <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)} value={this.state.location}>
+                  <input id="current-location-input" type="text" placeholder="City" list="current-loc-list" onChange={this.handleInputChange.bind(this)} value={this.state.location} onKeyPress={this.enterFunctionality}>
                   </input>
                   <datalist id="current-loc-list">
                     <option value="San Diego"></option>
