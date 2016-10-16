@@ -42,11 +42,11 @@ class App extends React.Component {
     }
     else {
       // alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
-      changeWindow();
+      changeWindow(city);
     }
     // localStorage.setItem("location", JSON.stringify(this.state.location));
 
-    function changeWindow() {
+    function changeWindow(city) {
       window.location.assign("https://www.wunderground.com/");
     }
 
