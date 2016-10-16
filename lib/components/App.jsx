@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const WeatherButton = require('./WeatherButton.jsx');
+// require('./LocalStorage.jsx');
 
 class App extends React.Component {
   constructor(props) {
@@ -11,10 +12,10 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount(){
-    const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
-    this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"})
-  } //end of componentDidMount
+  // componentDidMount(){
+  //   const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
+  //   this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"})
+  // } //end of componentDidMount
 
   getWeatherData() { //when they click on Get Weather button
     let that = this;
