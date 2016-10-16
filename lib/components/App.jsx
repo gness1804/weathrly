@@ -12,10 +12,14 @@ class App extends React.Component {
     };
   }
 
-  // componentDidMount(){
-  //   const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
-  //   this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"})
-  // } //end of componentDidMount
+  componentDidMount(){
+    const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
+    this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"});
+  } //end of componentDidMount
+
+  // componentDidMount: function() {
+  //   window.addEventListener('resize', this.handleResize);
+  // },
 
   getWeatherData() { //when they click on Get Weather button
     let that = this;
@@ -43,7 +47,7 @@ class App extends React.Component {
     else {
       changeWindow(city);
     }
-    // localStorage.setItem("location", JSON.stringify(this.state.location));
+    localStorage.setItem("location", JSON.stringify(this.state.location));
 
     function changeWindow(city) {
       let urlAssignment = "https://www.google.com/search?q=weather&ie=utf-8&oe=utf-8#q=weather+";
