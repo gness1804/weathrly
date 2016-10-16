@@ -48,7 +48,7 @@ class App extends React.Component {
     // localStorage.setItem("location", JSON.stringify(this.state.location));
 
     function changeWindow() {
-      alert('hi');
+      window.location.assign("http://www.w3schools.com");
     }
 
   } //end of getWeatherData
