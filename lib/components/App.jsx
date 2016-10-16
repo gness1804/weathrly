@@ -41,9 +41,16 @@ class App extends React.Component {
       });
     }
     else {
-      alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
+      // alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
+      // window.location("www.google.com");
+      changeWindow();
     }
     // localStorage.setItem("location", JSON.stringify(this.state.location));
+
+    function changeWindow() {
+      alert('hi');
+    }
+
   } //end of getWeatherData
 
   handleInputChange(e) { //when they enter data into location field
