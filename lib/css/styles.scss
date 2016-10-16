@@ -62,7 +62,7 @@ header {
 
   .warning {
     height: 150px;
-    width: 600px;
+    width: 580px;
     border: 5px solid crimson;
     border-radius: 2%;
     margin-left: 20%;
@@ -71,15 +71,7 @@ header {
     color: crimson;
     background-color: $white;
     box-shadow: 8px 8px 12px $dark-grey;
-    // position: relative;
   }
-
-  // .alert {
-  //   height: 60px;
-  //   width: 75px;
-  //   position: absolute;
-  //   margin-left: 50px;
-  // }
 
   .symbol {
     height: 60px;
@@ -98,7 +90,7 @@ header {
 
   .weather-card, {
     height: 150px;
-    width: 600px;
+    width: 620px;
     border: 5px solid white;
     border-radius: 2%;
     background: linear-gradient(to bottom,
@@ -107,7 +99,7 @@ header {
     rgba(10,88,214,1) 50%,
     rgba(83,137,225,1) 79%,
     rgba(136,174,234,1) 100%);
-    margin-left: 20%;
+    margin-left: 17%;
     margin-top: 20px;
     margin-bottom: 20px;
     box-shadow: 8px 8px 12px $dark-grey;
