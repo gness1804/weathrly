@@ -13,14 +13,10 @@ class App extends React.Component {
   }
 
   componentDidMount(){
+    let that = this;
     const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
     this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"});
-    window.addEventListener("click", this.getWeatherData.bind(this));
   } //end of componentDidMount
-
-  // componentDidMount: function() {
-  //   window.addEventListener('resize', this.handleResize);
-  // },
 
   getWeatherData() { //when they click on Get Weather button
     let that = this;
