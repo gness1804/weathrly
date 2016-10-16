@@ -69,16 +69,17 @@ header {
     margin-top: 10px;
     margin-bottom: 10px;
     color: crimson;
+    background-color: $dark-grey;
+    box-shadow: 8px 8px 12px $dark-grey;
   }
 
-  .rain {
-    background-image: url('../../images/rain.jpg');
-  }
-
-  .sun {
-    background-image: url('../../images/xsun.jpg');
-    display: fill;
-  }
+  // .rain {
+  //   background-image: url('../../images/rain.jpg');
+  // }
+  //
+  // .sun {
+  //   background-image: url('../../images/xsun.jpg');
+  // }
 
   .weather-card, {
     height: 150px;
