@@ -49,7 +49,7 @@ class App extends React.Component {
     function changeWindow(city) {
       let urlAssignment = "https://www.wunderground.com/cgi-bin/findweather/getForecast?query=";
       let newAssignment = urlAssignment + city;
-      window.location.assign(newAssignment);
+      window.open(newAssignment);
     }
 
   } //end of getWeatherData
