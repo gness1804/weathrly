@@ -41,7 +41,6 @@ class App extends React.Component {
       });
     }
     else {
-      // alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
       changeWindow(city);
     }
     // localStorage.setItem("location", JSON.stringify(this.state.location));
@@ -53,12 +52,6 @@ class App extends React.Component {
     }
 
   } //end of getWeatherData
-
-//   function addParameterToURL(param){
-//     _url = location.href;
-//     _url += (_url.split('?')[1] ? '&':'?') + param;
-//     return _url;
-// }
 
   handleInputChange(e) { //when they enter data into location field
     this.setState({location: e.target.value});
