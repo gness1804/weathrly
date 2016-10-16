@@ -42,13 +42,12 @@ class App extends React.Component {
     }
     else {
       // alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
-      // window.location("www.google.com");
       changeWindow();
     }
     // localStorage.setItem("location", JSON.stringify(this.state.location));
 
     function changeWindow() {
-      window.location.assign("http://www.w3schools.com");
+      window.location.assign("https://www.wunderground.com/");
     }
 
   } //end of getWeatherData
