@@ -47,10 +47,17 @@ class App extends React.Component {
     // localStorage.setItem("location", JSON.stringify(this.state.location));
 
     function changeWindow(city) {
-      window.location.assign("https://www.wunderground.com/");
+      let urlAssignment = "https://www.wunderground.com/cgi-bin/findweather/getForecast?query=";
+      window.location.assign(urlAssignment);
     }
 
   } //end of getWeatherData
+
+//   function addParameterToURL(param){
+//     _url = location.href;
+//     _url += (_url.split('?')[1] ? '&':'?') + param;
+//     return _url;
+// }
 
   handleInputChange(e) { //when they enter data into location field
     this.setState({location: e.target.value});
