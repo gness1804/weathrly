@@ -12,10 +12,11 @@ class App extends React.Component {
     };
   }
 
-  // componentDidMount(){
-  //   const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
-  //   this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"})
-  // } //end of componentDidMount
+  componentDidMount(){
+    let that = this;
+    const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
+    this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"});
+  } //end of componentDidMount
 
   getWeatherData() { //when they click on Get Weather button
     let that = this;
@@ -41,9 +42,17 @@ class App extends React.Component {
       });
     }
     else {
-      alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
+      changeWindow(city);
     }
-    // localStorage.setItem("location", JSON.stringify(this.state.location));
+
+    localStorage.setItem("location", JSON.stringify(this.state.location));
+
+    function changeWindow(city) {
+      let urlAssignment = "https://www.google.com/search?q=weather&ie=utf-8&oe=utf-8#q=weather+";
+      let newAssignment = urlAssignment + city;
+      window.open(newAssignment);
+    }
+
   } //end of getWeatherData
 
   handleInputChange(e) { //when they enter data into location field
