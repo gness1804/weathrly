@@ -55,14 +55,6 @@ class App extends React.Component {
         <header>
           <h1>Welcome to -Weathrly-</h1>
           <h3>Your World<br></br>Your Weather</h3>
-          <nav>
-            <ul>
-              <li className="nav-bar-item">Cities</li>
-              <li className="nav-bar-item">Current Warnings</li>
-              <li className="nav-bar-item">Driving Conditions</li>
-              <li className="nav-bar-item">Cool Links</li>
-            </ul>
-          </nav>
         </header>
         <fieldset>
                   <label htmlFor="current-location-input" className="fieldset-left-item">Your Current Location:
@@ -91,9 +83,10 @@ class WeatherList extends React.Component {
 
   showWeatherData(data) {
 
-    return(<div>
-      <p>
-        On {data.date}, the weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}. There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+    return(<div className="weather-card">
+      <p className="weather-card-text1">
+        On {data.date}, the weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
       </p>
     </div>
     );
@@ -102,23 +95,31 @@ class WeatherList extends React.Component {
   showExtremeWeather(data) {
     if (data.weatherType.scale === 3) {
       if (data.weatherType.type === "sunny") {
-        return(<div>
-          On {data.date}, there will be extreme sun. Take care and use plenty of sunscreen!
+        return(<div className="warning sun">
+          <p className="weather-card-text1">On {data.date}, there will be extreme sun. </p>
+          <p className="weather-card-text2">Take care and use plenty of sunscreen!
+          </p>
         </div>);
       }
       else if (data.weatherType.type === "rain") {
-        return(<div>
-          On {data.date}, there will be a high chance of flooding and extreme rain. Stay inside and don't drive if possible!
+        return(<div className='warning rain'>
+          <p className="weather-card-text1">On {data.date}, there will be a high chance of flooding and extreme rain. </p>
+          <p className="weather-card-text2">Stay inside and don't drive if possible!
+          </p>
         </div>);
       }
       else if (data.weatherType.type === "windy") {
-        return(<div>
-          On {data.date}, there will be very high winds. Stay indoors!
+        return(<div className='warning windy'>
+          <p className="weather-card-text1">On {data.date}, there will be very high winds.</p>
+          <p className="weather-card-text2">Stay indoors!</p>
         </div>);
       }
       else if (data.weatherType.type === "snow") {
-        return(<div>
-          On {data.date}, is a blizzard forecasted! Take precautions!
+        return(<div className='warning snow'>
+          <p className="weather-card-text1">On {data.date}, there will be heavy snow!
+          </p>
+          <p className="weather-card-text2">Take precautions!
+          </p>
         </div>);
       }
 
