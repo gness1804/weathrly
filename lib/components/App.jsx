@@ -15,6 +15,7 @@ class App extends React.Component {
   componentDidMount(){
     const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
     this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"});
+    window.addEventListener("click", this.getWeatherData.bind(this));
   } //end of componentDidMount
 
   // componentDidMount: function() {
@@ -47,6 +48,7 @@ class App extends React.Component {
     else {
       changeWindow(city);
     }
+
     localStorage.setItem("location", JSON.stringify(this.state.location));
 
     function changeWindow(city) {
