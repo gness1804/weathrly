@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const WeatherButton = require('./WeatherButton.jsx');
+// require('./LocalStorage.jsx');
 
 class App extends React.Component {
   constructor(props) {
@@ -11,10 +12,10 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount(){
-    const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
-    this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"})
-  } //end of componentDidMount
+  // componentDidMount(){
+  //   const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
+  //   this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"})
+  // } //end of componentDidMount
 
   getWeatherData() { //when they click on Get Weather button
     let that = this;
@@ -42,7 +43,7 @@ class App extends React.Component {
     else {
       alert('Please choose either San Diego, San Francisco, Castle Rock, or Denver, and check your spelling.');
     }
-    localStorage.setItem("location", JSON.stringify(this.state.location));
+    // localStorage.setItem("location", JSON.stringify(this.state.location));
   } //end of getWeatherData
 
   handleInputChange(e) { //when they enter data into location field
@@ -84,8 +85,9 @@ class WeatherList extends React.Component {
   showWeatherData(data) {
 
     return(<div className="weather-card">
-      <p className="weather-card-text1">
-        On {data.date}, the weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+
+        <p className='date'>{data.date}</p>
+        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
         <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
       </p>
     </div>
@@ -96,27 +98,27 @@ class WeatherList extends React.Component {
     if (data.weatherType.scale === 3) {
       if (data.weatherType.type === "sunny") {
         return(<div className="warning sun">
-          <p className="weather-card-text1">On {data.date}, there will be extreme sun. </p>
+        <p className='date'>{data.date}</p><p className="weather-card-text1">There will be extreme sun. </p>
           <p className="weather-card-text2">Take care and use plenty of sunscreen!
           </p>
         </div>);
       }
       else if (data.weatherType.type === "rain") {
         return(<div className='warning rain'>
-          <p className="weather-card-text1">On {data.date}, there will be a high chance of flooding and extreme rain. </p>
+        <p className='date'>{data.date}</p><p className="weather-card-text1">There will be a high chance of flooding and extreme rain. </p>
           <p className="weather-card-text2">Stay inside and don't drive if possible!
           </p>
         </div>);
       }
       else if (data.weatherType.type === "windy") {
         return(<div className='warning windy'>
-          <p className="weather-card-text1">On {data.date}, there will be very high winds.</p>
+          <p className='date'>{data.date}</p> <p className="weather-card-text1">There will be very high winds.</p>
           <p className="weather-card-text2">Stay indoors!</p>
         </div>);
       }
       else if (data.weatherType.type === "snow") {
         return(<div className='warning snow'>
-          <p className="weather-card-text1">On {data.date}, there will be heavy snow!
+        <p className='date'>{data.date}</p><p className="weather-card-text1">There will be heavy snow!
           </p>
           <p className="weather-card-text2">Take precautions!
           </p>
