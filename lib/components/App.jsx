@@ -98,27 +98,27 @@ class WeatherList extends React.Component {
     if (data.weatherType.scale === 3) {
       if (data.weatherType.type === "sunny") {
         return(<div className="warning sun">
-          <p className="weather-card-text1">On {data.date}, there will be extreme sun. </p>
+        <p className='date'>{data.date}</p><p className="weather-card-text1">There will be extreme sun. </p>
           <p className="weather-card-text2">Take care and use plenty of sunscreen!
           </p>
         </div>);
       }
       else if (data.weatherType.type === "rain") {
         return(<div className='warning rain'>
-          <p className="weather-card-text1">On {data.date}, there will be a high chance of flooding and extreme rain. </p>
+        <p className='date'>{data.date}</p><p className="weather-card-text1">There will be a high chance of flooding and extreme rain. </p>
           <p className="weather-card-text2">Stay inside and don't drive if possible!
           </p>
         </div>);
       }
       else if (data.weatherType.type === "windy") {
         return(<div className='warning windy'>
-          <p className="weather-card-text1">On {data.date}, there will be very high winds.</p>
+          <p className='date'>{data.date}</p> <p className="weather-card-text1">There will be very high winds.</p>
           <p className="weather-card-text2">Stay indoors!</p>
         </div>);
       }
       else if (data.weatherType.type === "snow") {
         return(<div className='warning snow'>
-          <p className="weather-card-text1">On {data.date}, there will be heavy snow!
+        <p className='date'>{data.date}</p><p className="weather-card-text1">There will be heavy snow!
           </p>
           <p className="weather-card-text2">Take precautions!
           </p>
