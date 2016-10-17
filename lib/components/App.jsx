@@ -8,14 +8,14 @@ class App extends React.Component {
     super(props);
     this.state = {
       weather: [],
-      location: "Denver"
+      location: ""
     };
   }
 
   componentDidMount(){
     let that = this;
     const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
-    this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"});
+    this.setState({location: mostRecentLocation ? mostRecentLocation : ""});
   } //end of componentDidMount
 
   getWeatherData() { //when they click on Get Weather button

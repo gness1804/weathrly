@@ -29,8 +29,21 @@ header {
   height: 350px;
 }
 
+//city classes to style header
 .Denver {
-  display: none;
+  background-image: url('../../images/denver-skyline.jpg');
+}
+
+.San.Diego {
+  background-image: url('../../images/san-diego-skyline.jpg');
+}
+
+.San.Francisco {
+  background-image: url('../../images/golden-gate-bridge.jpeg');
+}
+
+.Castle.Rock {
+  background-image: url('../../images/castle-rock-2.jpg');
 }
 
   h1 {
