@@ -69,8 +69,10 @@ class App extends React.Component {
   render () {
     return (
       <div className="GetWeather">
-        <header>
+
+        <header className={this.state.location}>
           <h1>Welcome to Weathrly</h1>
+
           <h3>Your World<br></br>Your Weather</h3>
         </header>
         <fieldset>
@@ -217,3 +219,4 @@ if (data.weatherType.type === "sunny") {
 } //end of WeatherList
 
 ReactDOM.render(<App title='Weathrly' />, document.querySelector('#application'));
+module.exports = App
