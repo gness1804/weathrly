@@ -3,7 +3,7 @@ const ReactDOM = require('react-dom');
 const WeatherButton = require('./WeatherButton.jsx');
 // require('./LocalStorage.jsx');
 
-class App extends React.Component {
+class GetWeather extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,11 +12,11 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount(){
-    let that = this;
-    const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
-    this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"});
-  } //end of componentDidMount
+  // componentDidMount(){
+  //   let that = this;
+  //   const mostRecentLocation = JSON.parse(localStorage.getItem("location"));
+  //   this.setState({location: mostRecentLocation ? mostRecentLocation : "Denver"});
+  // } //end of componentDidMount
 
   getWeatherData() { //when they click on Get Weather button
     let that = this;
@@ -45,7 +45,7 @@ class App extends React.Component {
       changeWindow(city);
     }
 
-    localStorage.setItem("location", JSON.stringify(this.state.location));
+    // localStorage.setItem("location", JSON.stringify(this.state.location));
 
     function changeWindow(city) {
       let urlAssignment = "https://www.google.com/search?q=weather&ie=utf-8&oe=utf-8#q=weather+";
@@ -70,7 +70,7 @@ class App extends React.Component {
     return (
       <div className="GetWeather">
         <header>
-          <h1>Welcome to Weathrly</h1>
+          <h1>Welcome to -Weathrly-</h1>
           <h3>Your World<br></br>Your Weather</h3>
         </header>
         <fieldset>
