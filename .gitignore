@@ -45,3 +45,8 @@ jspm_packages
 
 #The image file from Kris's demo
 kris-react-demo.jpg
+
+#Bundle files 
+main.bundle.js
+test.bundle.js
+bundle.js
