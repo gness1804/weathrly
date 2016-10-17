@@ -42,6 +42,10 @@ header {
   background-image: url('../../images/golden-gate-bridge.jpeg');
 }
 
+.Castle.Rock {
+  
+}
+
   h1 {
     @include boilerplate-headline;
     color: $white;
