@@ -24,6 +24,8 @@ fieldset {
 
 header {
   background-image: url('../../images/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 350px;
 }
 
@@ -43,7 +45,7 @@ header {
   h3 {
     font-size: $subheader-font-size;
     font-style: italic;
-    color: $light-grey;
+    color: $dark-grey;
     // padding-bottom: 5px;
     font-size: 30px;
     font-weight: 400;
@@ -58,12 +60,10 @@ header {
 
   .warning {
     height: 150px;
-    width: 580px;
+    width: 620px;
     border: 5px solid crimson;
     border-radius: 2%;
-    margin-left: 19%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 15px auto;
     color: crimson;
     background-color: $white;
     box-shadow: 8px 8px 12px $dark-grey;
@@ -87,9 +87,7 @@ header {
     rgba(10,88,214,1) 50%,
     rgba(83,137,225,1) 79%,
     rgba(136,174,234,1) 100%);
-    margin-left: 17%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 15px auto;
     box-shadow: 8px 8px 12px $dark-grey;
 
   }
@@ -159,3 +157,6 @@ fieldset {
   }
 
 } //end of fieldset
+
+@media screen and (max-width: 490px) {};
+@media screen and (max-width: 370px) {};
