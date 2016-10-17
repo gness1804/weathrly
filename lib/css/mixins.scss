@@ -3,6 +3,10 @@
   background-size: auto 1500px;
 }
 
+@mixin weather-card-styling {
+  
+}
+
 @mixin boilerplate-headline {
   font-size: $headline-default;
   text-align: center;
