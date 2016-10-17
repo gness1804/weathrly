@@ -38,6 +38,10 @@ header {
   background-image: url('../../images/san-diego-skyline.jpg');
 }
 
+.San.Francisco {
+  background-image: url('../../images/golden-gate-bridge.jpeg');
+}
+
   h1 {
     @include boilerplate-headline;
     color: $white;
