@@ -219,3 +219,4 @@ if (data.weatherType.type === "sunny") {
 } //end of WeatherList
 
 ReactDOM.render(<App title='Weathrly' />, document.querySelector('#application'));
+module.exports = App
