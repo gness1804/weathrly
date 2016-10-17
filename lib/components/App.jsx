@@ -69,7 +69,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="GetWeather">
-        <header>
+        <header className={this.state.location}>
           <h1>Welcome to -Weathrly-</h1>
           <h3>Your World<br></br>Your Weather</h3>
         </header>

@@ -27,6 +27,10 @@ header {
   height: 350px;
 }
 
+.Denver {
+  display: none;
+}
+
   h1 {
     @include boilerplate-headline;
     color: $white;
