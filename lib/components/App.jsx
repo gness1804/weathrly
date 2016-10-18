@@ -112,7 +112,22 @@ class WeatherList extends React.Component {
       if (condition === 'snow') {
         return '../../images/snowflake2.png';
       }
-    }
+      else if (condition === 'sunny') {
+        return '../../images/sun.png';
+      }
+      else if (condition === 'rain') {
+        return '../../images/rain2.png';
+      }
+      else if (condition === 'windy') {
+        return '../../images/wind.png';
+      }
+      else if (condition === 'cloudy') {
+        return '../../images/cloudy2.png';
+      }
+      else if (condition === 'thunder storms') {
+        return '../../images/thunder.png';
+      }
+    } //end of chooseSrc
 
     return(<div className="weather-card">
             <p className='date'>{data.date}</p>
