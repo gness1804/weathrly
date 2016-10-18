@@ -129,7 +129,8 @@ class WeatherList extends React.Component {
       'sunny': 'There will be extreme sun.',
       'rain': 'There will be a high chance of flooding and extreme rain.',
       'windy': 'There will be very high winds.',
-      'snow': 'There will be heavy snow!'
+      'snow': 'There will be heavy snow!',
+      'foggy': 'There will be heavy fog.'
     } //end of chooseCondition1
 
     if (extremeness === 3) {
