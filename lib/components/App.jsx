@@ -125,11 +125,18 @@ class WeatherList extends React.Component {
     let condition = data.weatherType.type;
     let extremeness = data.weatherType.scale;
 
-    if (data.weatherType.scale === 3) {
-      return(<div className="warning sun">
+    let chooseCondition1 = {
+      'sunny': 'There will be extreme sun.',
+      'rain': 'There will be a high chance of flooding and extreme rain.',
+      'windy': 'There will be very high winds.',
+      'snow': 'There will be heavy snow!'
+    } //end of chooseCondition1
+
+    if (extremeness === 3) {
+      return(<div className="warning">
       <p className='date'>{data.date}</p>
       <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
-      <p className="weather-card-text1">There will be extreme sun. </p>
+      <p className="weather-card-text1">{chooseCondition1[condition]}</p>
       <p className="weather-card-text2">Take care and use plenty of sunscreen!
       </p>
 
