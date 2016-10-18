@@ -101,70 +101,81 @@ class WeatherList extends React.Component {
   }
 
   showWeatherData(data) {
-if (data.weatherType.type === "sunny") {
     return(<div className="weather-card">
-        <p className='date'>{data.date}</p>
-        <img alt="sunny weather icon" className='symbol' src='../../images/sun.png'/>
-        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
-        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
-      </p>
-    </div>
-    );
-  }
-  else if (data.weatherType.type === "rain") {
-    return(<div className="weather-card">
-        <p className='date'>{data.date}</p>
-        <img alt="rainy weather icon" className='symbol' src='../../images/rain2.png'/>
-        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
-        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
-      </p>
-    </div>
-    );
-  }
-  else if (data.weatherType.type === "windy") {
-    return(<div className="weather-card">
+            <p className='date'>{data.date}</p>
+            <img alt="sunny weather icon" className='symbol' src={chooseWeatherIcon(data)}/>
+            <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+            <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+          </p>
+        </div>)
 
-        <p className='date'>{data.date}</p>
-        <img alt='windy weather icon' className='symbol' src='../../images/wind.png'/>
-        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
-        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
-      </p>
-    </div>
-    );
-  }
-  else if (data.weatherType.type === "snow") {
-    return(<div className="weather-card">
 
-        <p className='date'>{data.date}</p>
-        <img alt='snowy weather icon' className='symbol' src='../../images/snowflake2.png'/>
-        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
-        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
-      </p>
-    </div>
-    );
-  }
-  else if (data.weatherType.type === "cloudy") {
-    return(<div className="weather-card">
-        <p className='date'>{data.date}</p>
-        <img alt='cloudy weather icon' className='symbol' src='../../images/cloudy2.png'/>
-        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
-        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
-      </p>
-    </div>
-    );
-  }
-  else if (data.weatherType.type === "thunder storms") {
-    return(<div className="weather-card">
-        <p className='date'>{data.date}</p>
-        <img alt='stormy weather icon' className='symbol' src='../../images/thunder.png'/>
-        <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
-        <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
-      </p>
-    </div>
-    );
-  }
-};
-
+        function chooseWeatherIcon(data) {
+          console.log("hi");
+        }
+// if (data.weatherType.type === "sunny") {
+//     return(<div className="weather-card">
+//         <p className='date'>{data.date}</p>
+//         <img alt="sunny weather icon" className='symbol' src='../../images/sun.png'/>
+//         <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+//         <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+//       </p>
+//     </div>
+//     );
+//   }
+//   else if (data.weatherType.type === "rain") {
+//     return(<div className="weather-card">
+//         <p className='date'>{data.date}</p>
+//         <img alt="rainy weather icon" className='symbol' src='../../images/rain2.png'/>
+//         <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+//         <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+//       </p>
+//     </div>
+//     );
+//   }
+//   else if (data.weatherType.type === "windy") {
+//     return(<div className="weather-card">
+//
+//         <p className='date'>{data.date}</p>
+//         <img alt='windy weather icon' className='symbol' src='../../images/wind.png'/>
+//         <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+//         <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+//       </p>
+//     </div>
+//     );
+//   }
+//   else if (data.weatherType.type === "snow") {
+//     return(<div className="weather-card">
+//
+//         <p className='date'>{data.date}</p>
+//         <img alt='snowy weather icon' className='symbol' src='../../images/snowflake2.png'/>
+//         <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+//         <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+//       </p>
+//     </div>
+//     );
+//   }
+//   else if (data.weatherType.type === "cloudy") {
+//     return(<div className="weather-card">
+//         <p className='date'>{data.date}</p>
+//         <img alt='cloudy weather icon' className='symbol' src='../../images/cloudy2.png'/>
+//         <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+//         <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+//       </p>
+//     </div>
+//     );
+//   }
+//   else if (data.weatherType.type === "thunder storms") {
+//     return(<div className="weather-card">
+//         <p className='date'>{data.date}</p>
+//         <img alt='stormy weather icon' className='symbol' src='../../images/thunder.png'/>
+//         <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
+//         <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
+//       </p>
+//     </div>
+//     );
+//   }
+}; //end of showWeatherData
 
   showExtremeWeather(data) {
     if (data.weatherType.scale === 3) {
