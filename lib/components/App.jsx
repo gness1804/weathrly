@@ -23,31 +23,29 @@ class App extends React.Component {
     let that = this;
     let city = this.state.location.toUpperCase();
     let target;
-    // if (city === "DENVER") {
-    //   $.get("http://weatherly-api.herokuapp.com/api/weather/denver", function (data) {
-    //     that.setState({weather:data});
-    //   });
-    // }
-    // else if (city === "SAN DIEGO") {
-    //   $.get("http://weatherly-api.herokuapp.com/api/weather/san-diego", function (data) {
-    //     that.setState({weather:data});
-    //   });
-    // }
-    // else if (city === "CASTLE ROCK") {
-    //   $.get("http://weatherly-api.herokuapp.com/api/weather/castle-rock", function (data) {
-    //     that.setState({weather:data});
-    //   });
-    // }
-    // else if (city === "SAN FRANCISCO") {
-    //   $.get("http://weatherly-api.herokuapp.com/api/weather/san-fransico", function (data) {
-    //     that.setState({weather:data});
-    //   });
-    // }
-    // else {
-    //   changeWindow(city);
-    // }
+    if (city === "DENVER") {
+      target = "denver";
+    }
+    else if (city === "SAN DIEGO") {
+      $.get("http://weatherly-api.herokuapp.com/api/weather/san-diego", function (data) {
+        that.setState({weather:data});
+      });
+    }
+    else if (city === "CASTLE ROCK") {
+      $.get("http://weatherly-api.herokuapp.com/api/weather/castle-rock", function (data) {
+        that.setState({weather:data});
+      });
+    }
+    else if (city === "SAN FRANCISCO") {
+      $.get("http://weatherly-api.herokuapp.com/api/weather/san-fransico", function (data) {
+        that.setState({weather:data});
+      });
+    }
+    else {
+      changeWindow(city);
+    }
 
-    $.get("http://weatherly-api.herokuapp.com/api/weather/" + "denver", function (data) {
+    $.get("http://weatherly-api.herokuapp.com/api/weather/" + target, function (data) {
       that.setState({weather:data});
     });
 
