@@ -136,9 +136,9 @@ class WeatherList extends React.Component {
     let chooseCondition2 = {
       'sunny': 'Take care and use plenty of sunscreen!',
       'rain': "Stay inside and don't drive if possible!",
-      'windy': '',
-      'snow': '',
-      'foggy': ''
+      'windy': 'Stay indoors!',
+      'snow': 'Take precautions!',
+      'foggy': 'Be aware that driving visibility will be extremely limited.'
     } //end of chooseCondition2
 
     if (extremeness === 3) {
