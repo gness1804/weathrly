@@ -19,6 +19,11 @@ describe('App.jsx state changes', function() {
     expect(wrapper.text()).to.contain('Your Current Location');
   });
 
+  it('should not display weather on page load/until button is cilcked', function() {
+  const wrapper = mount(<App />)
+  wrapper.state('weather').length = 0;
+  });
+
   it.skip('should render eight days of weather when the GetWeather button is clicked', function() {
   const wrapper = mount(<App />)
   wrapper.state('weather').length = 0;
@@ -27,6 +32,7 @@ describe('App.jsx state changes', function() {
   expect(wrapper.state('weather').length).to.equal(8);
   });
 }); //end of App.jsx
+
 
 // describe('WeatherList rendering', function() {
 //   it('should render the weather for the given location', function() {
