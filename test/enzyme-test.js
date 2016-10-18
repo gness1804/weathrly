@@ -19,17 +19,24 @@ describe('App.jsx state changes', function() {
     expect(wrapper.text()).to.contain('Your Current Location');
   });
 
-  it('should not display weather on page load/until button is cilcked', function() {
+  it('should not display weather on page load/until button is clicked', function() {
   const wrapper = mount(<App />)
-  wrapper.state('weather').length = 0;
+  expect(wrapper.state().weather.length).to.equal(0);
   });
 
   it('should render eight days of weather when the GetWeather button is clicked', function() {
   const wrapper = mount(<App />)
-  wrapper.state('weather').length = 0;
-  wrapper.find('#current-location-input').simulate('change', {target: {value: 'DENVER'}});
+  wrapper.find('#current-location-input').simulate('change', {target: {value: 'Denver'}});
   wrapper.find('#get-weather-button').simulate('click');
-  expect(wrapper.state('weather').length).to.equal(8);
+  setTimeout(() => {
+            expect(wrapper.update().state().weather.length).to.equal(8)
+             done();
+         }, 2000)
+  });
+
+  it('should have an empty array on page load to which weather data will populate', function() {
+  const wrapper = mount(<App />)
+  expect(wrapper.state('weather')).deep.equal([]);
   });
 }); //end of App.jsx
 
@@ -37,7 +44,7 @@ describe('App.jsx state changes', function() {
 // describe('WeatherList rendering', function() {
 //   it('should render the weather for the given location', function() {
 //     const wrapper = mount(<App />);
-//     var weather = data.weatherType.type
+//     var weather = this.data.weatherType.type
 //     wrapper.find('.weather-card')
 //     if (weather === 'sunny')
 //     expect(wrapper.state('weather')).to.equal('sunny');
