@@ -47,11 +47,11 @@ describe('App.jsx state changes', function() {
     expect(wrapper.update().state().weather.length).to.equal(0);
   });
 
-it('should open a new browser window if user enters a location besides Denver, San Diego, San Francisco, or Castle Rock', {
+it('should open a new browser window if user enters a location besides Denver, San Diego, San Francisco, or Castle Rock', function() {
   const wrapper = mount(<App />)
   wrapper.find('#current-location-input').simulate('change', {target: {value: 'Houston'}});
   wrapper.find('#get-weather-button').simulate('click');
-  expect(window.open);
+  expect(window.open());
 });
 }); //end of App.jsx
 
