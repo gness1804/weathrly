@@ -134,8 +134,8 @@ class WeatherList extends React.Component {
     } //end of chooseCondition1
 
     let chooseCondition2 = {
-      'sunny': '',
-      'rain': '',
+      'sunny': 'Take care and use plenty of sunscreen!',
+      'rain': "Stay inside and don't drive if possible!",
       'windy': '',
       'snow': '',
       'foggy': ''
