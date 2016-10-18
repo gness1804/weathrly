@@ -13,11 +13,14 @@ global.document = require('jsdom').jsdom(
 //and an instance of the window
 global.window = document.defaultView;
 global.navigator = window.navigator;
+
+//to allow local storage when testing
 if (!global.window.localStorage) {
   localStorage = {
-    getItem() { return '{}'; },}
+    getItem() { return '{}'; },};
   }
 
+//to allow jquery 
   if (typeof(exports) !== "undefined"){
     var $ = require('jquery');
   }

@@ -8,8 +8,13 @@ import {shallow, mount, render} from 'enzyme';
 
 describe('App.jsx rendering', function() {
   it('should render the weather for the given location', function() {
-    const wrapper = mount(<App />)
-    var input = wrapper.find('#current-location-input').simulate('change', {target: {value: 'Denver'}})
+    const wrapper = mount(<App />);
+    var input = wrapper.find('#current-location-input').simulate('change', {target: {value: 'Denver'}});
     expect(wrapper.state('location')).to.equal('Denver');
   });
-});
+
+  it('should render the text "Your Current Location"', function () {
+    const wrapper = render(<App />);
+    expect(wrapper.text()).to.contain('Your Current Location');
+  });
+}); //end of App.jsx
