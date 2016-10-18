@@ -30,10 +30,10 @@ class App extends React.Component {
       target = "san-diego";
     }
     else if (city === "CASTLE ROCK") {
-      target = "";
+      target = "castle-rock";
     }
     else if (city === "SAN FRANCISCO") {
-      target = "";
+      target = "san-fransico";
     }
     else {
       changeWindow(city);
