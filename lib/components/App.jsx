@@ -102,7 +102,6 @@ class WeatherList extends React.Component {
 
   showWeatherData(data) {
     let condition = data.weatherType.type;
-    // let conditionSrc = chooseIcon[condition];
     let chooseIcon = {
       'snow': '../../images/snowflake2.png'
     }
