@@ -122,44 +122,56 @@ class WeatherList extends React.Component {
 }; //end of showWeatherData
 
   showExtremeWeather(data) {
-    if (data.weatherType.scale === 3) {
-      if (data.weatherType.type === "sunny") {
-        return(<div className="warning sun">
-        <p className='date'>{data.date}</p>
-        <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
-        <p className="weather-card-text1">There will be extreme sun. </p>
-        <p className="weather-card-text2">Take care and use plenty of sunscreen!
-        </p>
+    let condition = data.weatherType.type;
+    let extremeness = data.weatherType.scale;
 
-        </div>);
-      }
-      else if (data.weatherType.type === "rain") {
-        return(<div className='warning rain'>
-          <p className='date'>{data.date}</p>
-          <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
-          <p className="weather-card-text1">There will be a high chance of flooding and extreme rain. </p>
-          <p className="weather-card-text2">Stay inside and don't drive if possible!
-          </p>
-        </div>);
-      }
-      else if (data.weatherType.type === "windy") {
-        return(<div className='warning windy'>
-          <p className='date'>{data.date}</p>
-          <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
-          <p className="weather-card-text1">There will be very high winds.</p>
-          <p className="weather-card-text2">Stay indoors!</p>
-        </div>);
-      }
-      else if (data.weatherType.type === "snow") {
-        return(<div className='warning snow'>
-          <p className='date'>{data.date}</p>
-          <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
-          <p className="weather-card-text1">There will be heavy snow!
-          </p>
-          <p className="weather-card-text2">Take precautions!
-          </p>
-        </div>);
-      }
+    if (data.weatherType.scale === 3) {
+      return(<div className="warning sun">
+      <p className='date'>{data.date}</p>
+      <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
+      <p className="weather-card-text1">There will be extreme sun. </p>
+      <p className="weather-card-text2">Take care and use plenty of sunscreen!
+      </p>
+
+      </div>);
+
+      // if (data.weatherType.type === "sunny") {
+      //   return(<div className="warning sun">
+      //   <p className='date'>{data.date}</p>
+      //   <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
+      //   <p className="weather-card-text1">There will be extreme sun. </p>
+      //   <p className="weather-card-text2">Take care and use plenty of sunscreen!
+      //   </p>
+      //
+      //   </div>);
+      // }
+      // else if (data.weatherType.type === "rain") {
+      //   return(<div className='warning rain'>
+      //     <p className='date'>{data.date}</p>
+      //     <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
+      //     <p className="weather-card-text1">There will be a high chance of flooding and extreme rain. </p>
+      //     <p className="weather-card-text2">Stay inside and don't drive if possible!
+      //     </p>
+      //   </div>);
+      // }
+      // else if (data.weatherType.type === "windy") {
+      //   return(<div className='warning windy'>
+      //     <p className='date'>{data.date}</p>
+      //     <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
+      //     <p className="weather-card-text1">There will be very high winds.</p>
+      //     <p className="weather-card-text2">Stay indoors!</p>
+      //   </div>);
+      // }
+      // else if (data.weatherType.type === "snow") {
+      //   return(<div className='warning snow'>
+      //     <p className='date'>{data.date}</p>
+      //     <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
+      //     <p className="weather-card-text1">There will be heavy snow!
+      //     </p>
+      //     <p className="weather-card-text2">Take precautions!
+      //     </p>
+      //   </div>);
+      // }
     }
   }
 
