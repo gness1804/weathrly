@@ -124,6 +124,9 @@ class WeatherList extends React.Component {
       else if (condition === 'thunder storms') {
         return '../../images/thunder.png';
       }
+      else if (condition === 'foggy') {
+        return '../../images/foggy.png';
+      }
     } //end of chooseSrc
 
     return(<div className="weather-card">
