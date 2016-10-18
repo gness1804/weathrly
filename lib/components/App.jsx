@@ -133,13 +133,20 @@ class WeatherList extends React.Component {
       'foggy': 'There will be heavy fog.'
     } //end of chooseCondition1
 
+    let chooseCondition2 = {
+      'sunny': '',
+      'rain': '',
+      'windy': '',
+      'snow': '',
+      'foggy': ''
+    } //end of chooseCondition2
+
     if (extremeness === 3) {
       return(<div className="warning">
       <p className='date'>{data.date}</p>
       <img alt='extreme weather warning icon' className='symbol' src='../../images/alert.png'/>
       <p className="weather-card-text1">{chooseCondition1[condition]}</p>
-      <p className="weather-card-text2">Take care and use plenty of sunscreen!
-      </p>
+      <p className="weather-card-text2">{chooseCondition2[condition]}</p>
 
       </div>);
 
