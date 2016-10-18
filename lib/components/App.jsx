@@ -104,13 +104,19 @@ class WeatherList extends React.Component {
   showWeatherData(data) {
 
     let condition = data.weatherType.type;
-    let chooseIcon = {
-      'snow': '../../images/snowflake2.png'
+    // let chooseIcon = {
+    //   'snow': '../../images/snowflake2.png'
+    // }
+
+    function chooseSrc() {
+      if (condition === 'snow') {
+        return '../../images/snowflake2.png';
+      }
     }
 
     return(<div className="weather-card">
             <p className='date'>{data.date}</p>
-            <img alt="weather icon" className='symbol' src={chosen}/>
+            <img alt="weather icon" className='symbol' src={chooseSrc()}/>
             <p className="weather-card-text1"> The weather will be {data.weatherType.type} with a high of {data.temp.high} and a low of {data.temp.low}.</p>
             <p className="weather-card-text2">There will be a {Math.floor(data.weatherType.chance * 100)} percent chance of this weather event happening.
           </p>
