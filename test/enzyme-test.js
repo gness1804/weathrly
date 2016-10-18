@@ -24,7 +24,7 @@ describe('App.jsx state changes', function() {
   wrapper.state('weather').length = 0;
   });
 
-  it.skip('should render eight days of weather when the GetWeather button is clicked', function() {
+  it('should render eight days of weather when the GetWeather button is clicked', function() {
   const wrapper = mount(<App />)
   wrapper.state('weather').length = 0;
   wrapper.find('#current-location-input').simulate('change', {target: {value: 'DENVER'}});

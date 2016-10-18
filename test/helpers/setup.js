@@ -16,11 +16,12 @@ global.navigator = window.navigator;
 
 //to allow local storage when testing
 if (!global.window.localStorage) {
-  localStorage = {
-    getItem() { return '{}'; },};
-  }
-
-//to allow jquery 
+ localStorage = {
+   getItem() { return '{}'; },
+   setItem() {}
+ }
+}
+//to allow jquery
   if (typeof(exports) !== "undefined"){
     var $ = require('jquery');
   }
