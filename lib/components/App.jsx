@@ -111,7 +111,7 @@ class WeatherList extends React.Component {
 
 
         function chooseWeatherIcon(data) {
-          console.log("hi");
+          console.log(data);
         }
 // if (data.weatherType.type === "sunny") {
 //     return(<div className="weather-card">
